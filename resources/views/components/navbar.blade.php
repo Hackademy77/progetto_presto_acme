@@ -19,6 +19,9 @@
             <button type="submit">Logout</button>
           </form>
         </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route('item.create')}}">Aggiungi prodotto</a>
+        </li>
         @else
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{{route('register')}}">Registrati</a>
