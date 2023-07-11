@@ -1,10 +1,8 @@
 <x-layout>
-
-    <h2>fghjkl</h2>
     <div class="container"> 
         <div class="row">
             @foreach($items as $item)
-                <div class="col-6">
+                <div class="col-6 col-md-4 my-5">
                 <div class="card shadow " style="width: 18rem;">
                 <img src="https://picsum.photos/200" class="card-img-top rounded" alt="...">
                 <div class="card-body">
