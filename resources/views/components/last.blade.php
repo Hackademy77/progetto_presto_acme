@@ -10,7 +10,8 @@
                     <p class="card-text text">{{$item->price}}</p>
                     <a href="{{route ('item.show',$item)}}" class=" btn btn-primary shadow">Visualizza</a>
                     <a href="{{route ('categoryShow',$item->category)}}" class="my-2 card-link border-top pt-2 border-dark shadow btn btn-success">{{$item->category->name}}</a>
-                    <p class="card-footer">{{$item->created_at}}</p>
+                    <p class="card-footer">{{$item->created_at->format('d/m/Y')}}</p>
+                    <p>Pubblicato da : {{$item->user->name ?? ''}}</p>
                 </div>
                 </div>
                 </div>

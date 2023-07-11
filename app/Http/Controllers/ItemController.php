@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -21,7 +22,7 @@ class ItemController extends Controller
                 array_push($arrBySearch, $item);
             }
         }
-        return view('cerca', compact('arrBySearch'));
+        return view('items.search', compact('arrBySearch','chiaveDiRicerca'));
     }
 
 

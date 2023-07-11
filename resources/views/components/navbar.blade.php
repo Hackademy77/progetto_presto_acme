@@ -33,10 +33,10 @@
       </ul>
         @if(Auth::user() != null)
         <ul class="ps-0 row align-items-center my-0 me-4">
-          <li class="nav-item col-12 col-md-6 px-0">
+          <li class="nav-item col-12 col-md-6 px-0 pt-2">
             <p class="nav-link">{{Auth::user()->name}}</p>
           </li>
-          <li class="nav-item col-12 col-md-6 px-0">
+          <li class="nav-item col-12 col-md-6 px-3">
             <form action="{{route('logout')}}" method="post" class="nav-link">
               @csrf
               <button type="submit"><i class="fa-solid fa-right-from-bracket fa-xl"></i></button>

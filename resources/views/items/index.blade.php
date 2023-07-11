@@ -10,10 +10,11 @@
                 <div class="card-body">
                     <h5 class="card-title text">{{$item->name}}</h5>
                     <p class="card-text text">{{$item->description}}</p>
-                    <p class="card-text text">{{$item->price}}</p>
+                    <p class="card-text ">Prezzo : {{$item->price}} €</p>
                     <a href="{{route ('item.show',$item)}}" class=" btn btn-primary shadow">Visualizza</a>
                     <a href="{{route ('categoryShow',$item->category)}}" class="my-2 card-link border-top pt-2 border-dark shadow btn btn-success">{{$item->category->name}}</a>
-                    <p class="card-footer">{{$item->created_at}}</p>
+                    <p class="card-footer ">
+                        Pubblicato da {{$item->user->name ?? ''}} il {{$item->created_at->format('d/m/Y')}}</p> 
                 </div>
                 </div>
                 </div>
