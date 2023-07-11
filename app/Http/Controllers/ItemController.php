@@ -15,6 +15,7 @@ class ItemController extends Controller
         $items = Item::paginate(6);
         return view('items.index', compact('items'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
