@@ -17,4 +17,7 @@ use App\Http\Controllers\FrontController;
 
 Route::get('/', [FrontController::class, "welcome"])->name('home');
 
-Route::get('/annunci/crea', [ItemController::class, 'create'])->name('item.create');
+Route::get('/items/create', [ItemController::class, 'create'])->middleware('auth')->name('item.create');
+Route::get('/category/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/detail/item/{item}', [ItemController::class, 'showItem'])->name('item.show');
+Route::get('/all/items', [ItemController::class, 'indexItem'])->name('item.index');

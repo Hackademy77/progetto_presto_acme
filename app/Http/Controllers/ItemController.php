@@ -10,9 +10,10 @@ class ItemController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function indexItem()
     {
-        //
+        $items = Item::paginate(6);
+        return view('items.index', compact('items'));
     }
 
     /**
@@ -34,9 +35,9 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Item $item)
+    public function showItem(Item $item)
     {
-        //
+        return view('items.show', compact('item'));
     }
 
     /**

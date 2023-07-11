@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h2>fghjkl</h2>
+    <h2 class="text-light text-center">Annunci</h2>
     <div class="container"> 
         <div class="row">
             @foreach($items as $item)
@@ -18,6 +18,7 @@
                 </div>
                 </div>
             @endforeach
+            {{$items->links()}}
         </div>
     </div>
 </x-layout>
