@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg nav-custom">
   <div class="container-fluid py-2">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand fs-2 fw-2" href="/">Presto</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -32,14 +32,14 @@
         </li>
       </ul>
         @if(Auth::user() != null)
-        <ul class="ps-0">
-          <li class="nav-item">
+        <ul class="ps-0 row align-items-center my-0 me-4">
+          <li class="nav-item col-12 col-md-6 px-0">
             <p class="nav-link">{{Auth::user()->name}}</p>
           </li>
-          <li class="nav-item w-100">
+          <li class="nav-item col-12 col-md-6 px-0">
             <form action="{{route('logout')}}" method="post" class="nav-link">
               @csrf
-              <button type="submit">Logout</button>
+              <button type="submit"><i class="fa-solid fa-right-from-bracket fa-xl"></i></button>
             </form>
           </li>
         </ul>
@@ -56,3 +56,10 @@
     </div>
   </div>
 </nav>
+
+@if(session('message'))
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{session('message')}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
