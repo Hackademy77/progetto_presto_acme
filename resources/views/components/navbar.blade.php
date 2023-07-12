@@ -14,9 +14,6 @@
               <a class="nav-link" aria-current="page" href="{{route('item.create')}}">Aggiungi prodotto</a>
           </li>        
         @endif
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Home</a>
-        </li>
         @auth
         @if(Auth::user()->is_revisor)
           <li class="nav-item">

@@ -26,3 +26,7 @@ Route::get('/search/items', [ItemController::class, 'search'])->name('item.searc
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/item/{item}', [RevisorController::class, 'acceptItem'])->middleware('isRevisor')->name('revisor.accept_item');
 Route::patch('/reject/item/{item}', [RevisorController::class, 'rejectItem'])->middleware('isRevisor')->name('revisor.reject_item');
+
+Route::post('/request/revisor', [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/form/revisor/',[RevisorController::class,'formRevisor'])->name('form.revisor');
+Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
