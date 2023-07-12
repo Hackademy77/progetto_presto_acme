@@ -13,7 +13,19 @@
           <li class="nav-item">
               <a class="nav-link" aria-current="page" href="{{route('item.create')}}">Aggiungi prodotto</a>
           </li>        
-        @endif  
+        @endif
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        @auth
+        @if(Auth::user()->is_revisor)
+          <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">Zona Revisore
+              <span class="" >{{App\Models\Item::toBeRevisionedCount()}} <span class="visually-hidden">unread messages</span></span>
+              </a>
+          </li>        
+        @endif 
+        @endauth   
         <li class="nav-item dropdown ">
           <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorie
@@ -60,6 +72,13 @@
 @if(session('message'))
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         {{session('message')}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+@if(session('access.denied'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{session('access.denied')}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 @endif

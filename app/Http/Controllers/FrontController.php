@@ -11,7 +11,7 @@ class FrontController extends Controller
 
     public function welcome() {
 
-        $items = Item::take(6)->get()->sortBy('created_at');
+        $items = Item::where('is_accepted', true)->take(6)->get()->sortByDesc('created_at');
         return view('welcome', compact('items'));
     }
 
