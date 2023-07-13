@@ -12,20 +12,6 @@ class ItemController extends Controller
      * Display a listing of the resource.
      */
 
-    public function search(Request $request) {
-        $items = Item::all();
-        $chiaveDiRicerca = $request->query('chiave');
-        $arrBySearch = [];
-
-        foreach($items as $item){
-            if(Str::of(Str::lower($item->name))->contains(Str::lower($chiaveDiRicerca))){
-                array_push($arrBySearch, $item);
-            }
-        }
-        return view('items.search', compact('arrBySearch','chiaveDiRicerca'));
-    }
-
-
 
     public function indexItem()
     {

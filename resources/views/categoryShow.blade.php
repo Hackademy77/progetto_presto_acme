@@ -8,7 +8,7 @@
     </div>
     <div class="container"> 
         <div class="row">
-            @forelse($category->items as $item)
+            @forelse($items as $item)
                 <div class="col-6 col-md-4 my-5 d-flex justify-content-evenly">
                 <div class="card shadow " style="width: 18rem;">
                 <img src="https://picsum.photos/200" class="card-img-top rounded" alt="...">

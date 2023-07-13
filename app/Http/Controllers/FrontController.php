@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -16,7 +17,13 @@ class FrontController extends Controller
     }
 
     public function categoryShow(Category $category) {
+        $items = $category->items->where('is_accepted', true);
+        return view('categoryShow', compact('category', 'items'));
+    }
 
-        return view('categoryShow', compact('category'));
+    public function searchItems(Request $request) {
+        $items = Item::search($request->searched)->where('is_accepted', true)->paginate(10);
+        
+        return view('items.search', compact('items'));
     }
 }
