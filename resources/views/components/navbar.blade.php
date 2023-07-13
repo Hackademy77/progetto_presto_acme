@@ -1,6 +1,12 @@
 <nav class="navbar navbar-expand-lg nav-custom">
   <div class="container-fluid py-2">
-    <a class="navbar-brand fs-2 fw-2" href="/">Presto</a>
+    <a class="navbar-brand fs-2 fw-2 col-1 d-flex align-items-center" href="/">
+      <img class="img-navbar" src="./img/arrow.png" alt="">
+    </a>
+    <form action="{{route('item.search')}}" class="d-flex" role="search">
+      <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -62,10 +68,6 @@
           </li>
         </ul>
         @endif
-        <form action="{{route('item.search')}}" class="d-flex" role="search">
-          <input name="searched" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
     </div>
   </div>
 </nav>

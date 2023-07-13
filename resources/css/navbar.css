@@ -1,12 +1,8 @@
-.nav-custom {
-    background-color: #3586ff;
-    /* border-bottom: 3px solid #f5dd9d;
-    box-shadow: 0px 5px 20px #f0ed86; */
-    border-bottom: 3px solid #4E95FF;
-    box-shadow: 0px 5px 20px #4E95FF;
+.navbar {
+    background-color: #f57875;
+    border-bottom: 5px solid #f0003c;
 }
 
-button{
-    border: none;
-    background-color: transparent;
+.img-navbar {
+    width: 100%;
 }
