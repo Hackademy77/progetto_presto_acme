@@ -30,8 +30,10 @@ class RevisorController extends Controller
         
     }
 
-    public function becomeRevisor(){
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
+    public function becomeRevisor(Request $request){
+        $message =  $request->input('message');
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user(), $message));
+
         return redirect()->back()->with('message', 'La tua richiesta di diventare revisore è stata accettata');
     }
 
@@ -41,7 +43,7 @@ class RevisorController extends Controller
     }
 
     public function formRevisor() {
-
-        return view('mail.form_revisor');
+        $user = Auth::user();
+        return view('mail.form_revisor', compact('user'));
     }
 }

@@ -18,15 +18,18 @@ class BecomeRevisor extends Mailable
      * Create a new message instance.
      */
     public $user;
-    public function __construct(User $user)
+    public $body;
+    public function __construct(User $user, $body)
     {
         $this->user=$user;
+        $this->body=$body;
+
     }
 
     public function build(){
         return $this->from('presto.it@noreply.com')
-            ->view('mail.become_revisor')
-            ->with(['message' => $this->user->message]);
+            ->view('mail.become_revisor');
+            // ->with(['message' => $this->user->message]);
     }
     /**
      * Get the message envelope.
