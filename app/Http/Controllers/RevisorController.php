@@ -43,7 +43,8 @@ class RevisorController extends Controller
     }
 
     public function formRevisor() {
-        $user = Auth::user();
-        return view('mail.form_revisor', compact('user'));
-    }
+        $user=Auth::user();
+        if(Auth::user()->is_revisor){
+            return redirect('/')->with('access.denied', 'Sei già Revisore!');
+    } return view('mail.form_revisor',compact('user'));}
 }

@@ -23,8 +23,16 @@
                     <div class="mb-3 row justify-content-center">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-                        <button class="my-5 w-25" type="submit" class="btn btn-primary">Accedi</button>
                     </div>
+                        <div class="d-flex justify-content-center"><button class="button-82-pushable mt-4" type="submit" role="button">
+                            <span class="button-82-shadow"></span>
+                            <span class="button-82-edge"></span>
+                            <span class="button-82-front text">
+                            Accedi
+                            </span>
+                        </button></div>
+                        
+                    
                 </form>
             </div>
         </div>

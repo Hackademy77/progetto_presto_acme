@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
 
 /*
@@ -30,5 +31,7 @@ Route::patch('/accept/item/{item}', [RevisorController::class, 'acceptItem'])->m
 Route::patch('/reject/item/{item}', [RevisorController::class, 'rejectItem'])->middleware('isRevisor')->name('revisor.reject_item');
 
 Route::post('/request/revisor', [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
-Route::get('/form/revisor/',[RevisorController::class,'formRevisor'])->name('form.revisor');
+Route::get('/form/revisor/',[RevisorController::class,'formRevisor'])->middleware('auth')->name('form.revisor');
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+
+Route::get('/user/profile',[ProfileController::class,'profile'])->name('user.profile');

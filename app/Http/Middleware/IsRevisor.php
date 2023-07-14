@@ -17,10 +17,10 @@ class IsRevisor
     public function handle(Request $request, Closure $next): Response
     {
      if(Auth::check() && Auth::user()->is_revisor){
-        return $next($request); 
+        return $next($request) ; 
      }
        return redirect('/')->with('access.denied', 'Attenzione! Solo i revisori possono accedere a questa area');
-    }
+    } 
 
 
 }

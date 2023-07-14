@@ -58,14 +58,15 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('item.index')}}">Tutti gli Annunci</a>
+          <a class="nav-link" aria-current="page" href="{{route('item.index')}}">Annunci</a>
         </li>
         <div class="collapse navbar-collapse col-md-1 order-md-last mx-3 d-flex justify-content-end">
         </ul>
           @if(Auth::user() != null)
           <ul class="ps-0 row align-items-center my-0 col-md-5 justify-content-end">
-            <li class="nav-item col-12 col-md-5 px-0 pt-2 d-flex align-items-center text-center">
-              <p class="nav-link">{{Auth::user()->name}}</p>
+            <li class="nav-item col-12 col-md-5 px-0 d-flex align-items-center text-center">
+              <p class="nav-link mb-0">{{Auth::user()->name}}</p>
+              <a href="{{ route('user.profile') }}"><i class="fa-solid fa-user ms-3 " style="color: #f0003c;"></i></a>
             </li>
             <li class="nav-item col-12 col-md-5 px-3 d-flex justify-content-start">
               <form action="{{route('logout')}}" method="post" class="nav-link ">
