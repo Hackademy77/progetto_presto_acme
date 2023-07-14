@@ -1,10 +1,7 @@
-header{
-    height: 80vh;
-  }
-  
+
   .header-custom {
       background-color: #f57875;
-      height: 50vh;
+      height: 40vh;
       margin-top: 10vh;
       border: 5px solid #f0003c;
       box-shadow: 0px 0px 40px #d34e2b;
@@ -60,9 +57,8 @@ header{
   .button-82-front {
     display: block;
     position: relative;
-    padding: 12px 27px;
+    padding: 6px 21px;
     border-radius: 12px;
-    font-size: 1.1rem;
     color: white;
     background: hsl(345deg 100% 47%);
     will-change: transform;
@@ -75,8 +71,7 @@ header{
   
   @media (min-width: 768px) {
     .button-82-front {
-      font-size: 1.25rem;
-      padding: 12px 42px;
+      padding: 6px 21px;
     }
   }
   
