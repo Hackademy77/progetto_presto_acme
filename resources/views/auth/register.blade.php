@@ -14,7 +14,7 @@
                     </ul>
                 </div>
                 @endif
-                <form method="post" action="{{route('login')}}">
+                <form method="post" action="{{route('register')}}">
                 @csrf
                     <div class="mb-3 text-center d-flex flex-column align-items-center">
                         <label for="name" class="form-label">Nome</label>

@@ -1,9 +1,17 @@
 <x-layout>
 
 
-<div class="mt-5 ms-5 ps-5"><a href="/" class="btn btn-primary shadow ">Torna alla Home</a></div>
+
 <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-3"> 
+            <div class="mt-5 ms-5 ps-5"><a href="/" class="btn btn-primary shadow ">Torna alla Home</a>
+            </div>
+        </div>
+    </div>
+    
     <div class="row">
+        
         @forelse($items as $item)
             
                 <x-card

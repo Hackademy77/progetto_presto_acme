@@ -1,15 +1,28 @@
-<div class="col-6 col-md-4 my-5 d-flex justify-content-evenly">
-    <div class="card shadow " style="width: 18rem;">
-        <img src="https://picsum.photos/200" class="card-img-top rounded" alt="...">
-        <div class="card-body">
-            <h5 class="card-title ">{{$item->name}}</h5>
-            <p class="card-text ">{{$item->description}}</p>
-            <p class="card-text ">Prezzo : {{$item->price}} €</p>
-            <a href="{{route ('item.show',$item)}}" class="btn btn-primary shadow ">Visualizza</a>
-            <a href="{{route ('categoryShow',$item->category)}}" class= " my-2 card-link border-top pt-2 border-dark shadow btn btn-success">{{$item->category->name}}</a>
-            <p class="card-footer ">
-                Pubblicato da {{$item->user->name ?? ''}} il {{$item->created_at->format('d/m/Y')}}
-            </p> 
+<div class="col-12 col-md-4 d-flex justify-content-evenly">
+    <div class="card shadow card-custom">
+        <img src="https://picsum.photos/350/200" class="rounded mx-2 mt-2 mb-4" alt="...">
+        <div>
+            <h5 class="card-title text-center">{{$item->name}}</h5>
+            <p class="card-text text-center">{{$item->description}}</p>
+            <div class="row d-flex justify-content-around align-items-center">
+                <p class="col-md-5 col-5 d-flex my-0 text-start ms-2">Prezzo:</p>
+                <p class="col-md-6 col-6 card-text px-0">{{$item->price}}</p>
+            </div>
+            <div class="d-flex justify-content-around align-items-center">
+                <p class="col-md-5 col-5 my-0 text-start ms-2">Categoria:</p>
+                <a href="{{route ('categoryShow',$item->category)}}" class="col-md-6 col-6 link-category-custom">{{$item->category->name}}</a>
+            </div>
+            <div class="d-flex justify-content-center my-2">
+                <button class="button-82-pushable mt-4" type="submit" role="button">
+                    <span class="button-82-shadow"></span>
+                    <span class="button-82-edge"></span>
+                    <span class="button-82-front text">
+                        <a href="{{route ('item.show',$item)}}" class="link-custom">Visualizza</a>
+                    </span>
+                </button>
+            </div>
+            <p class="card-footer text-center">{{$item->created_at->format('d/m/Y')}}</p>
+            <p class="text-center">Pubblicato da : {{$item->user->name ?? ''}}</p>
         </div>
     </div>
 </div>

@@ -1,14 +1,22 @@
 <x-layout>
     
+
+    <div>
+        <h3 class="text-center mt-5">Benvenuto {{Auth::user()->name}}</h3>
+    </div>
+
+
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>I miei annunci</h1>
+                <h1 class="text-center mt-5">I tuoi annunci</h1>
             </div>
         </div>
     </div>
+
     
-    <div class="container">
+    
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12">
                 <table class="table table-striped">
@@ -63,9 +71,9 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h2>Work Zone</h1>
-                        <h2>Annunci da Revisionare</h2>
+                <div class="col-12 text-center mt-5">
+                    <h2 class="text-success mb-5">Work Zone</h1>
+                        <h2 class="mb-4">Annunci da Revisionare</h2>
                     </div>
                 </div>
             </div>
@@ -82,8 +90,8 @@
                                     <th scope="col">Prezzo</th>
                                     <th scope="col">Pubblicato il </th>
                                     <th scope="col">Pubblicato da </th>
-                                    {{-- <th scope="col">Accetta </th>
-                                    <th scope="col">Rifiuta</th> --}}
+                                    <th scope="col">Accetta </th>
+                                    <th scope="col">Rifiuta</th>
                                     
                                 </tr>
                             </thead>
@@ -91,14 +99,28 @@
                                 
                                 
                                 
-                                @forelse ($item_to_check as $itemToCheck)
+                                @forelse ($item_to_check as $item)
                                 <tr>
-                                    <th scope="row">{{$itemToCheck->id}}</th>
-                                    <td>{{$itemToCheck->name}}</td>
-                                    <td>{{$itemToCheck->category->name}}</td>
-                                    <td>{{$itemToCheck->price}}€</td>
-                                    <td>{{$itemToCheck->created_at}}</td>
-                                    <td>{{$itemToCheck->user->name}}</td>
+                                    <th scope="row">{{$item->id}}</th>
+                                    <td>{{$item->name}}</td>
+                                    <td>{{$item->category->name}}</td>
+                                    <td>{{$item->price}}€</td>
+                                    <td>{{$item->created_at}}</td>
+                                    <td>{{$item->user->name}}</td>
+                                    <td>
+                                        <form action="{{ route('profile.accept_item', ['item' => $item]) }}" method="POST">
+                                            @csrf
+                                            @method('PATCH')
+                                            <button class="btn btn-success shadow">Accetta</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form action="{{ route('profile.reject_item', ['item' => $item]) }}" method="POST">
+                                            @csrf
+                                            @method('PATCH')
+                                            <button class="btn btn-danger shadow">Rifiuta</button>
+                                        </form>
+                                    </td>
                                 </tr>
                                 @empty
                                 <tr></tr>

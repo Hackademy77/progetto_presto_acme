@@ -25,3 +25,9 @@
 .dropdown-menu {
     width: 25vh;
 }
+
+.button-logout {
+    border:none;
+    background-color: transparent;
+    color: #f0003c;
+}

@@ -35,3 +35,5 @@ Route::get('/form/revisor/',[RevisorController::class,'formRevisor'])->middlewar
 Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 
 Route::get('/user/profile',[ProfileController::class,'profile'])->name('user.profile');
+Route::patch('profile/accept/item/{item}', [ProfileController::class, 'acceptItem'])->middleware('isRevisor')->name('profile.accept_item');
+Route::patch('profile/reject/item/{item}', [ProfileController::class, 'rejectItem'])->middleware('isRevisor')->name('profile.reject_item');

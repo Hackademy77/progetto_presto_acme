@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="container custom-margin-top"> 
-        <div class="row">
+        <div class="row justify-content-evenly">
             @forelse($items as $item)
             <div class="col-6 col-md-3 my-5 d-flex justify-content-evenly">
                 <div class="card shadow card-custom" style="width: 25rem;">
