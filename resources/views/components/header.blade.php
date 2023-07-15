@@ -1,5 +1,5 @@
 <div class="container vh-100 w-75 my-5">
-    <header class="container header-custom rounded-pill d-flex flex-column justify-content-center">
+    <header class="container header-custom rounded d-flex flex-column justify-content-center">
         <section>
             <article class="row w-100 align-items-center justify-content-center">
                 <section class="col-12 col-md-6 h-75 d-flex flex-column align-items-center">
