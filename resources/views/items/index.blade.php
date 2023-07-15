@@ -1,5 +1,5 @@
 <x-layout>
-
+<div>
     <h2 class="text-light text-center">Annunci</h2>
     <div class="row">
         @foreach($items as $item)
@@ -33,14 +33,8 @@
             </div>
         @endforeach
     </div>
-</div>
-            <div class="container d-flex justify-content-center">
-
-                        {{$items->links()}}
-
-                </div>
-            
-        </div>
+    <div class="container d-flex justify-content-center">
+        {{$items->links()}}
     </div>
-    <div class="vh-100"></div>
+</div>
 </x-layout>

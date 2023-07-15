@@ -12,7 +12,8 @@ ul {
 }
 
 .custom-margin-top{
-    margin-top: 15rem;
+    margin-top: 10vh;
+    margin-bottom: 25vh;
 }
 
 .custom-button-color{
