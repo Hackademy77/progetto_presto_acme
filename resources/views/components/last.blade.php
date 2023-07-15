@@ -1,9 +1,10 @@
-<div class="container"> 
+<div class="container my-5"> 
     <div class="row">
+        <h2 class="text-center">Gli ultimi articoli</h2>
         @foreach($items as $item)
             <div class="col-12 col-md-4 d-flex justify-content-evenly">
                 <div class="card shadow card-custom">
-                    <img src="https://picsum.photos/350/200" class="rounded mx-2 mt-2 mb-4" alt="...">
+                    <img src="https://picsum.photos/350/200" class="rounded mx-2 mb-4" alt="...">
                     <div>
                         <h5 class="card-title text-center">{{$item->name}}</h5>
                         <p class="card-text text-center">{{$item->description}}</p>

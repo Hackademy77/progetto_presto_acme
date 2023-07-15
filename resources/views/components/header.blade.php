@@ -1,9 +1,9 @@
-<div class="container vh-100 w-75 my-5">
-    <header class="container header-custom rounded d-flex flex-column justify-content-center">
-        <section>
+<div class="container w-75 my-3">
+    <header class="container header-custom rounded d-flex flex-column justify-content-center py-3">
+        <section class="d-flex justify-content-center align-items-center my-3">
             <article class="row w-100 align-items-center justify-content-center">
                 <section class="col-12 col-md-6 h-75 d-flex flex-column align-items-center">
-                    <div class="d-flex justify-content-center align-items-center h-50" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine">
+                    <div class="d-flex justify-content-center align-items-center h-50 text-center" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine">
                         <h1>Benvenuti su</h1>
                     </div> 
                 </section>
@@ -27,55 +27,55 @@
         </section>
     </header>
 
-    <div class="container headerCustom">
-        <div class="row my-4">
-            <div class="col-12 col-md-6 d-flex justify-content-around">
-                <div class="d-flex flex-column align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Motori</h3>
+    <div class="container">
+        <div class="row my-2">
+            <div class="row col-md-6 d-flex justify-content-around">
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 1]) }}"><i class="fa-solid fa-car fa-xl" style="color: #000000;"></i></a>
+                    <h3>Motori</h3>
                 </div>
     
-                <div class="d-flex flex-column align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Abbigliamento</h3>
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 2]) }}"><i class="fa-sharp fa-solid fa-xl fa-shirt" style="color: #000000;"></i></a>
+                    <h3>Abbigliamento</h3>
                 </div>
             </div>
     
-            <div class="col-12 col-md-6 d-flex justify-content-around">
-                <div class="d-flex flex-column align-items-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Arredamento</h3>
+            <div class=" row col-md-6 d-flex justify-content-around">
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 3]) }}"><i class="fa-solid fa-couch" style="color: #000000;"></i></a>
+                    <h3>Arredamento</h3>
                 </div>
     
-                <div class="d-flex flex-column align-items-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Tecnologia</h3>
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 4]) }}"><i class="fa-solid fa-xl fa-laptop" style="color: #000000;"></i></a>
+                    <h3>Tecnologia</h3>
                 </div>
             </div>
         </div>
         
-        <div class="row my-4">
-            <div class="col-12 col-md-6 d-flex justify-content-around">
-                <div class="d-flex flex-column align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Musica</h3>
+        <div class="row my-2">
+            <div class="row col-md-6 d-flex justify-content-around">
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 5]) }}"><i class="fa-solid fa-xl fa-music" style="color: #000000;"></i></a>
+                    <h3>Musica</h3>
                 </div>
     
-                <div class="d-flex flex-column align-items-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Attrezzatura</h3>
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 6]) }}"><i class="fa-solid fa-xl fa-toolbox" style="color: #000000;"></i></a>
+                    <h3>Attrezzatura</h3>
                 </div>
             </div>
     
-            <div class="col-12 col-md-6 d-flex justify-content-around">
-                <div class="d-flex flex-column align-items-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Sport</h3>
+            <div class="row col-md-6 d-flex justify-content-around">
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 7]) }}"><i class="fa-solid fa-futbol fa-xl" style="color: #000000;"></i></a>
+                    <h3>Sport</h3>
                 </div>
     
-                <div class="d-flex flex-column align-items-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                    <h3>Film</h3>
+                <div class="col-12 my-2 d-flex flex-column align-items-center categories-custom rounded justify-content-center" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <a href="{{ route('categoryShow', ['category' => 8]) }}"><i class="fa-solid fa-clapperboard fa-xl" style="color: #000000;"></i></a>
+                    <h3>Film</h3>
                 </div>
             </div>
         </div>
