@@ -24,6 +24,9 @@
 
 .dropdown-menu {
     width: 25vh;
+    background-color: #f57875;
+    border: 3px solid #f0003c;
+    
 }
 
 .button-logout {

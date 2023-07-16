@@ -29,12 +29,12 @@
             Miei Annunci
           </a>
           <ul class="dropdown-menu"  aria-labelledby="categoriesDropdown">
-            <li class="nav-item col-12 justify-content-center">
+            <li class="nav-item col-12 text-center">
               <a class="nav-link" aria-current="page" href="{{route('item.create')}}">Aggiungi prodotto</a>
             </li> 
             @auth
             @if(Auth::user()->is_revisor)
-            <li class="justify-content-center">
+            <li class="nav-item col-12 text-center">
                 <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">Zona Revisore
                 <span class="" >{{App\Models\Item::toBeRevisionedCount()}} <span class="visually-hidden">unread messages</span></span>
                 </a>
@@ -52,7 +52,7 @@
           </a>
           <ul class="dropdown-menu"  aria-labelledby="categoriesDropdown">
             @foreach ($categories as $category)
-              <li>
+              <li class="text-center">
                 <a class="dropdown-item" href="{{route('categoryShow',compact('category'))}}">{{($category->name)}}</a>
               </li>
               <li><hr class="dropdown-divider"></li>

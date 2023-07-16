@@ -1,5 +1,5 @@
 <x-layout>
-<div>
+<div class="my-5">
     <h2 class="text-center">Candidati come Revisore</h2>
 </div>
 <div class="container">
