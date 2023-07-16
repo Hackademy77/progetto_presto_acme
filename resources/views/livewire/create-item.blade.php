@@ -1,7 +1,7 @@
 <form wire:submit.prevent="store()" class="mt-5">
   <div class="mb-3">
     <label for="name" class="form-label fs-5"><b>Nome</b> </label>
-    <input type="text" class="form-control" wire:model="name">
+    <input type="text" class="form-control" wire:model.lazy="name">
     @error('name') <span class="error text-success">{{$message}}</span> @enderror
   </div>
   <div class="mb-3">
@@ -23,5 +23,5 @@
     <input type="text" class="form-control" wire:model="description">
     @error('description') <span class="error text-success">{{$message}}</span> @enderror
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Invia</button>
 </form>

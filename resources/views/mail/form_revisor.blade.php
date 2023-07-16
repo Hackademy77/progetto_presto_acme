@@ -15,6 +15,10 @@
         <div>
             <p>
                 Inserisci un messaggio per chiedere di diventare revisore.
+                
+            </p>
+            <p>
+                Se sarà accettata, al tuo prossimo accesso troverai delle novità nel tuo profilo!
             </p>
         </div>
         <div class="form-group">
@@ -22,7 +26,7 @@
             <textarea name="message" id="message" rows="4" class="form-control" required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Invia</button>
     </form>
 </div>
 

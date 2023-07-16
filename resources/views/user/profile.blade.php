@@ -2,7 +2,7 @@
     
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-3 pt-5 shadow bg-light rounded h-100">
+            <div class="col-12 col-md-3 pt-5 shadow bg-light rounded custom-height-profile">
                 
                     <h3 class="text-center mt-5">Ciao, <span class="colorRed">{{Auth::user()->name}}</span>.</h3>
                     <div class="row">
@@ -14,7 +14,7 @@
                             Stato dell'account : <span class="colorRed">Revisore</span>
                         </li>
                         @elseif (Auth::user() != 'is_revisor' )
-                        <li class="py-4">
+                        <li class="py-4 text-center text-md-start">
                             Stato dell'account : <span class="text-success">Utente</span>
                         </li>
                         @endif
@@ -46,8 +46,8 @@
                                                 @foreach (Auth::user()->items as $item)
                                                 <tr>
                                                     <th scope="row">{{$item->id}}</th>
-                                                    <td>{{$item->name}}</td>
-                                                    <td>{{$item->category->name}}</td>
+                                                    <td><a href="{{route ('item.show',$item)}}">{{$item->name}}</a></td>
+                                                    <td><a href="{{route ('categoryShow',$item->category)}}">{{$item->category->name}}</a></td>
                                                     <td>{{$item->price}}€</td>
                                                     <td>{{$item->created_at}}</td>
                                                     @if ($item->is_accepted == null)

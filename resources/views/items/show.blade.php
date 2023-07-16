@@ -102,7 +102,7 @@
                 <div class="col-6 mx-auto">
                     <h3 class="card-title mb-3">{{$item->name}}</h3>
                     <p class="card-text my-4">Descrizione: {{$item->description}}</p>
-                    <p class="card-text my-5">Prezzo : {{$item->price}}</p>
+                    <p class="card-text my-5">Prezzo : {{$item->price}} €</p>
                     <a href="{{route('categoryShow',['category'=>$item->category])}}" class="my-2 border-top pt-2 border-light card-link shadow btn btn-primary">Categoria : {{$item->category->name}}</a>
                     <p class="card-footer">Pubblicato il {{$item->created_at->format('d/m/Y')}} -  da {{$item->user->name ??''}}</p>
                     

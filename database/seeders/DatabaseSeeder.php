@@ -17,10 +17,17 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'Test User',
+            'name' => 'prestoAdmin',
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
             'is_revisor' => true,
+        ],);
+
+        \App\Models\User::factory()->create([
+            'name' => 'Marco',
+            'email' => 'prova@prova.it',
+            'password' => Hash::make('password'),
+            'is_revisor' => false,
         ],);
 
         $categories = ['Motori', 'Abbigliamento', 'Arredamento', 'Tecnologia', 'Musica', 'Attrezzatura', 'Sport', 'Film'];
