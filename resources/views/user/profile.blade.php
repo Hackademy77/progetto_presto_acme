@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="col-12 text-center mt-5">
                     <h2 class="text-success mb-5">Work Zone</h2>
-                    <h2 class="mb-4">Annunci da Revisionare</h2>
+                    <h2 class="mb-4">Annunci da revisionare</h2>
                     <p class="text-center">
                         <a href="{{ route('revisor.index', ['item' => $item]) }}" class="btn btn-primary">Dettaglio articoli da revisionare</a>
                     <p>
