@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
+            'is_revisor' => true,
         ],);
 
         $categories = ['Motori', 'Abbigliamento', 'Arredamento', 'Tecnologia', 'Musica', 'Attrezzatura', 'Sport', 'Film'];

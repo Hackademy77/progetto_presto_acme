@@ -28,7 +28,9 @@ Route::get('/search/items', [FrontController::class, 'searchItems'])->name('item
 
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/item/{item}', [RevisorController::class, 'acceptItem'])->middleware('isRevisor')->name('revisor.accept_item');
+
 Route::patch('/reject/item/{item}', [RevisorController::class, 'rejectItem'])->middleware('isRevisor')->name('revisor.reject_item');
+Route::post('/revisor/undo', [RevisorController::class, 'undoAction'])->name('revisor.undoAction');
 
 Route::post('/request/revisor', [RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/form/revisor/',[RevisorController::class,'formRevisor'])->middleware('auth')->name('form.revisor');
@@ -36,4 +38,6 @@ Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->nam
 
 Route::get('/user/profile',[ProfileController::class,'profile'])->name('user.profile');
 Route::patch('profile/accept/item/{item}', [ProfileController::class, 'acceptItem'])->middleware('isRevisor')->name('profile.accept_item');
+
 Route::patch('profile/reject/item/{item}', [ProfileController::class, 'rejectItem'])->middleware('isRevisor')->name('profile.reject_item');
+

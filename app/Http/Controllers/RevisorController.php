@@ -6,6 +6,7 @@ use App\Models\Item;
 use App\Models\User;
 use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -13,22 +14,42 @@ use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $item_to_check = Item::where('is_accepted', null)->first();
-        return view('revisors.index', compact('item_to_check'));
+        $last_accepted_or_rejected_item = Session::get('last_accepted_or_rejected_item');
+
+        return view('revisors.index', compact('item_to_check', 'last_accepted_or_rejected_item'));
     }
+
     
-    public function acceptItem(Item $item) {
+    public function acceptItem(Item $item)
+    {
         $item->setAccepted(true);
-        return redirect()->back()->with('message', 'Complimenti, hai approvato l\'annuncio');
-        
+        Session::put('last_accepted_or_rejected_item', $item);
+        return redirect()->back()->with('message', "Hai approvato l'annuncio '{$item->name}'");
     }
+
     
-    public function rejectItem(Item $item) {
+    public function rejectItem(Item $item)
+    {
         $item->setAccepted(false);
-        return redirect()->back()->with('message', 'Complimenti, hai rifiutato l\'annuncio');
-        
+        Session::put('last_accepted_or_rejected_item', $item);
+        return redirect()->back()->with('message', "Hai rifiutato l'annuncio '{$item->name}");
     }
+
+    public function undoAction()
+    {
+        $last_accepted_or_rejected_item = Session::get('last_accepted_or_rejected_item');
+
+        if ($last_accepted_or_rejected_item) {
+            $last_accepted_or_rejected_item->setAccepted(null);
+            Session::forget('last_accepted_or_rejected_item');
+        }
+
+        return redirect()->back()->with('message', 'Ultima azione annullata con successo');
+    }
+
 
     public function becomeRevisor(Request $request){
         $message =  $request->input('message');
@@ -46,5 +67,8 @@ class RevisorController extends Controller
         $user=Auth::user();
         if(Auth::user()->is_revisor){
             return redirect('/')->with('access.denied', 'Sei già Revisore!');
-    } return view('mail.form_revisor',compact('user'));}
+    } return view('mail.form_revisor',compact('user'));
+}
+
+
 }

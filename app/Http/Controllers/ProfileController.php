@@ -6,12 +6,15 @@ use App\Models\Item;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
+
 {
-    public function profile() {
+    public function profile(Request $request) {
         $item_to_check = Item::where('is_accepted', null)->get()->sortByDesc('created_at');
-        // dd(gettype($item_to_check));
-        return view ('user.profile', compact('item_to_check'));
-        
+
+        $currentItemId = $request->input('item');
+        $item = $item_to_check->firstWhere('id', $currentItemId);
+
+        return view('user.profile', compact('item_to_check', 'item'));
     }
     public function acceptItem(Item $item) {
         $item->setAccepted(true);
