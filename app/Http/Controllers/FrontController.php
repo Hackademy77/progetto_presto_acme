@@ -26,4 +26,11 @@ class FrontController extends Controller
         
         return view('items.search', compact('items'));
     }
+
+    public function setLanguage($lang){
+
+        session()->put('locale', $lang);
+
+        return redirect()->back();
+    }
 }

@@ -1,6 +1,6 @@
 <x-layout>
 <div>
-    <h2 class="text-light text-center">Annunci</h2>
+    <h2 class="text-center">{{__('ui.allAnnouncements')}}</h2>
     <div class="row">
         @foreach($items as $item)
             <div class="col-12 col-md-4 d-flex justify-content-evenly">

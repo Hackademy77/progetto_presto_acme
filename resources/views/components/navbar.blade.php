@@ -8,7 +8,8 @@
       <span class="navbar-toggler-icon "></span>
     </button>    
     <form action="{{route('item.search')}}" class="d-flex col-md-7 col-6 mx-2" role="search">
-      <input name="searched" class="form-control input-custom me-2" type="search" placeholder="Ricerca..." aria-label="Search">
+      <input name="searched" class="form-control input-custom me-2" type="search" placeholder="{{__('ui.search')}}
+" aria-label="Search">
       <button class="button-82-pushable" type="submit" role="button">
         <span class="button-82-shadow"></span>
         <span class="button-82-edge"></span>
@@ -23,10 +24,19 @@
         <li class="nav-item col-12 col-md-1 d-flex justify-content-center">
           <a class="nav-link text-center" aria-current="page" href="/">Home</a>
         </li>
+        <li class="nav-item">
+          <x-_locale lang='it' />
+        </li>
+        <li class="nav-item">
+          <x-_locale lang='en' />
+        </li>
+        <li class="nav-item">
+          <x-_locale lang='es' />
+        </li>
         @if(Auth::user() != null)
         <li class="nav-item dropdown col-12 col-md-3 d-flex flex-column align-items-center justify-content-center">
           <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Miei Annunci
+          {{__('ui.myAdvertisements')}}
           </a>
           <ul class="dropdown-menu"  aria-labelledby="categoriesDropdown">
             <li class="nav-item col-12 text-center">
@@ -35,7 +45,7 @@
             @auth
             @if(Auth::user()->is_revisor)
             <li class="nav-item col-12 text-center">
-                <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">Zona Revisore
+                <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.reviewerArea')}}
                 <span class="" >{{App\Models\Item::toBeRevisionedCount()}} <span class="visually-hidden">unread messages</span></span>
                 </a>
             </li>        
@@ -48,7 +58,7 @@
            
         <li class="nav-item dropdown col-md-3 col-12 d-flex flex-column justify-content-center align-items-center">
           <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorie
+          {{__('ui.categories')}}
           </a>
           <ul class="dropdown-menu"  aria-labelledby="categoriesDropdown">
             @foreach ($categories as $category)
@@ -60,7 +70,7 @@
           </ul>
         </li>
         <li class="nav-item col-12 col-md-3">
-          <a class="nav-link" aria-current="page" href="{{route('item.index')}}">Annunci</a>
+          <a class="nav-link" aria-current="page" href="{{route('item.index')}}">{{__('ui.advertisements')}}</a>
         </li>
         <div class="collapse navbar-collapse col-md-1 order-md-last mx-3 d-flex justify-content-end">
         </ul>
@@ -85,10 +95,10 @@
           <div class="order-md-last">
             <ul class="ps-0 row align-items-center my-0 me-3">
               <li class="nav-item col-12 col-md-12 col-lg-6 pe-4">
-                <a class="nav-link" aria-current="page" href="{{route('register')}}">Registrati</a>
+                <a class="nav-link" aria-current="page" href="{{route('register')}}">{{__('ui.signUp')}}</a>
               </li>
               <li class="nav-item col-12 col-md-12 col-lg-6 pe-4">
-                <a class="nav-link" aria-current="page" href="{{route('login')}}">Accedi</a>
+                <a class="nav-link" aria-current="page" href="{{route('login')}}">{{__('ui.login')}}</a>
               </li>
             </ul>
           </div>

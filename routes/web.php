@@ -42,3 +42,5 @@ Route::get('/user/profile',[ProfileController::class,'profile'])->name('user.pro
 Route::patch('profile/accept/item/{item}', [ProfileController::class, 'acceptItem'])->middleware('isRevisor')->name('profile.accept_item');
 Route::patch('profile/reject/item/{item}', [ProfileController::class, 'rejectItem'])->middleware('isRevisor')->name('profile.reject_item');
 
+//rotta language
+Route::post('/lingua/{lang}',[FrontController::class,'setLanguage'])->name('setLocale');

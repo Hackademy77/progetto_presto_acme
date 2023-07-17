@@ -5,7 +5,7 @@
             <h5 class="card-title text-center">{{$item->name}}</h5>
             <p class="card-text text-center">{{$item->description}}</p>
             <div class="row d-flex justify-content-around align-items-center">
-                <p class="col-md-5 col-5 d-flex my-0 text-start ms-2">Prezzo:</p>
+                <p class="col-md-5 col-5 d-flex my-0 text-start ms-2">{{__('ui.price')}}:</p>
                 <p class="col-md-6 col-6 card-text px-0">{{$item->price}}</p>
             </div>
             <div class="d-flex justify-content-around align-items-center">

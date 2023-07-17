@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container col-12 col-md-6 d-flex flex-column align-items-center justify-content-around login-card rounded">
         <div class="row py-3 align-items-center">
-            <h2>Accedi</h2>
+            <h2>{{__('ui.login')}}</h2>
         </div>
         <div class="row w-100">
             <div class="col-12 col-md-8 w-100">
@@ -29,7 +29,7 @@
                         <span class="button-82-shadow"></span>
                         <span class="button-82-edge"></span>
                         <span class="button-82-front text">
-                        Accedi
+                        {{__('ui.loginbtn')}}
                         </span>
                         </button>
                     </div>
