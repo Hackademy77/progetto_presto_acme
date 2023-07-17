@@ -3,7 +3,7 @@
     <h2 class="text-light text-center">Annunci</h2>
     <div class="row">
         @foreach($items as $item)
-            <div class="col-12 col-md-3 d-flex justify-content-evenly">
+            <div class="col-12 col-md-4 d-flex justify-content-evenly">
                 <div class="card shadow card-custom" style="width: 20rem;">
                     <img src="https://picsum.photos/200/150" class="rounded mx-2 mt-2 mb-4" alt="...">
                     <div>

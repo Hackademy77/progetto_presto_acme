@@ -21,8 +21,17 @@
                     <span class="button-82-edge"></span>
                     <span class="button-82-front text">
                         <a class="link-custom" href="{{route('item.index')}}">Esplora</a>
+                        
                     </span>
                 </button>
+                <button class="button-82-pushable" role="button">
+                    <span class="button-82-shadow"></span>
+                    <span class="button-82-edge"></span>
+                    <span class="button-82-front text">
+                        <a class="link-custom" href="{{route('item.create')}}">Pubblica</a>
+                        
+                    </span>
+                
             </article>
         </section>
     </header>

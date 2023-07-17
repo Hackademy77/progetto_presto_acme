@@ -40,7 +40,7 @@ class CreateItem extends Component
        
         $this->reset();
 
-        return to_route('home')->with('message', 'annuncio aggiunto correttamente');
+        return to_route('home')->with('message', 'Annuncio aggiunto correttamente');
     }
 
     public function render()

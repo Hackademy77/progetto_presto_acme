@@ -114,8 +114,8 @@
                                                         
                                                         @forelse ($item_to_check as $item)
                                                 <tr>
-                                                    <th scope="row">{{$item->id}}</th>
-                                                    <td>{{$item->name}}</td>
+                                                    {{-- <th scope="row">{{$item->id}}</th> --}}
+                                                    <td scope="row">{{$item->name}}</td>
                                                     <td>{{$item->category->name}}</td>
                                                     <td>{{$item->price}}€</td>
                                                     <td>{{$item->created_at}}</td>

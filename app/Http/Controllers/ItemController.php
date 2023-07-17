@@ -15,7 +15,7 @@ class ItemController extends Controller
 
     public function indexItem()
     {
-        $items = Item::where('is_accepted', true)->paginate(6);
+        $items = Item::where('is_accepted', true)->orderBy('created_at','desc')->paginate(6);
         return view('items.index', compact('items'));
     }
     
