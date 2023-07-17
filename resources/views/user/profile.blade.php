@@ -4,18 +4,18 @@
         <div class="row">
             <div class="col-12 col-md-3 pt-5 shadow bg-light rounded custom-height-profile">
                 
-                    <h3 class="text-center mt-5">Ciao, <span class="colorRed">{{Auth::user()->name}}</span>.</h3>
+                    <h3 class="text-center mt-5">{{__('ui.helloProf')}}, <span class="colorRed">{{Auth::user()->name}}</span>.</h3>
                     <div class="row">
                     <ul class="py-4 ">
-                        <li class="py-4 text-center text-md-start">Utente dal : {{Auth::user()->created_at}}</li>
+                        <li class="py-4 text-center text-md-start">{{__('ui.userFrom')}} : {{Auth::user()->created_at}}</li>
                         <li class="py-4 text-center text-md-start">Email : {{Auth::user()->email}}</li>
                         @if (Auth::user()->is_revisor)
                         <li class="py-4 text-center text-md-start">
-                            Stato dell'account : <span class="colorRed">Revisore</span>
+                            {{__('ui.accountStatus')}} : <span class="colorRed">{{__('ui.revisor')}}</span>
                         </li>
                         @elseif (Auth::user() != 'is_revisor' )
                         <li class="py-4 text-center text-md-start">
-                            Stato dell'account : <span class="text-success">Utente</span>
+                            {{__('ui.accountStatus')}} : <span class="text-success">{{__('ui.user')}}</span>
                         </li>
                         @endif
                     </ul>
@@ -26,7 +26,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="text-center mt-5">I tuoi annunci</h1>
+                            <h1 class="text-center mt-5">{{__('ui.yourAnnouncements')}}</h1>
                             <div class="container mt-5">
                                 <div class="row justify-content-center">
                                     <div class="col-12 table-responsive">
@@ -34,11 +34,11 @@
                                             <thead>
                                                 <tr class="fw-light">
                                                     <th scope="col">#</th>
-                                                    <th scope="col">Articolo</th>
-                                                    <th scope="col">Categoria</th>
-                                                    <th scope="col">Prezzo</th>
-                                                    <th scope="col">Online dal </th>
-                                                    <th scope="col">Stato Ann.</th>
+                                                    <th scope="col">{{__('ui.articleTab')}}</th>
+                                                    <th scope="col">{{__('ui.categoryTab')}}</th>
+                                                    <th scope="col">{{__('ui.priceTab')}}</th>
+                                                    <th scope="col">{{__('ui.onlineFromTab')}} </th>
+                                                    <th scope="col">{{__('ui.announcementStatus')}}</th>
                                                     
                                                 </tr>
                                             </thead>
@@ -82,10 +82,10 @@
                                 <div class="container-fluid ps-0">
                                     <div class="row">
                                         <div class="col-12 text-center mt-5">
-                                            <h2 class="text-success mb-5">Work Zone</h2>
-                                            <h2 class="mb-4">Annunci da revisionare</h2>
+                                            <h2 class="text-success mb-5">{{__('ui.workZone')}}</h2>
+                                            <h2 class="mb-4">{{__('ui.anntoReview')}}</h2>
                                             <p class="text-center">
-                                                <a href="{{ route('revisor.index', ['item' => $item]) }}" class="btn btn-primary">Dettaglio articoli da revisionare</a>
+                                                <a href="{{ route('revisor.index', ['item' => $item]) }}" class="btn btn-primary">{{__('ui.tobeReviewedDetails')}}</a>
                                             <p>
                                         </div>
                                     </div>
@@ -98,13 +98,13 @@
                                                     <thead>
                                                         <tr>
                                                             {{-- <th scope="col">#</th> --}}
-                                                            <th scope="col">Articolo</th>
-                                                            <th scope="col">Categoria</th>
-                                                            <th scope="col">Prezzo</th>
-                                                            <th scope="col">Pubbl. il </th>
-                                                            <th scope="col">Pubbl. da </th>
-                                                            <th scope="col">Accetta velocemente </th>
-                                                            <th scope="col">Rifiuta velocemente</th>
+                                                            <th scope="col">{{__('ui.articleTab')}}</th>
+                                                            <th scope="col">{{__('ui.categoryTab')}}</th>
+                                                            <th scope="col">{{__('ui.priceTab')}}</th>
+                                                            <th scope="col">{{__('ui.fromTab')}} </th>
+                                                            <th scope="col">{{__('ui.dateTab')}} </th>
+                                                            <th scope="col">{{__('ui.fastAcceptTab')}} </th>
+                                                            <th scope="col">{{__('ui.fastRejectTab')}}</th>
                                                             
                                                         </tr>
                                                     </thead>
@@ -124,20 +124,20 @@
                                                         <form action="{{ route('profile.accept_item', ['item' => $item]) }}" method="POST">
                                                             @csrf
                                                             @method('PATCH')
-                                                            <button class="btn btn-success shadow">Accetta</button>
+                                                            <button class="btn btn-success shadow">{{__('ui.acceptTab')}}</button>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form action="{{ route('profile.reject_item', ['item' => $item]) }}" method="POST">
                                                             @csrf
                                                             @method('PATCH')
-                                                            <button class="btn btn-danger shadow">Rifiuta</button>
+                                                            <button class="btn btn-danger shadow">{{__('ui.rejectTab')}}</button>
                                                         </form>
                                                     </td>
                                                 </tr>
                                                 @empty
                                                 <tr>
-                                                    <td colspan="12">Non ci sono annunci da revisionare.</td>
+                                                    <td colspan="12">{{__('ui.nothingtoRevTab')}}</td>
                                                 </tr>
                                                 @endforelse
                                             </tbody>

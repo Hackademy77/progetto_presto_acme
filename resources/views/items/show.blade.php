@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container-fluid p-1 shadow mb-3">
         <div class="row">
-            <div class="col-12 p-5">
-                <h2 class="display-2">Annuncio : {{$item->name}}</h1>
+            <div class="col-12 p-2 mt-1">
+                <h2 class="display-5 text-center">{{__('ui.announcementShow')}}: {{$item->name}}</h1>
             </div>
         </div>
     </div>
@@ -101,10 +101,10 @@
             </div> <!-- /container -->
                 <div class="col-6 mx-auto">
                     <h3 class="card-title mb-3">{{$item->name}}</h3>
-                    <p class="card-text my-4">Descrizione: {{$item->description}}</p>
-                    <p class="card-text my-5">Prezzo : {{$item->price}} €</p>
-                    <a href="{{route('categoryShow',['category'=>$item->category])}}" class="my-2 border-top pt-2 border-light card-link shadow btn btn-primary">Categoria : {{$item->category->name}}</a>
-                    <p class="card-footer">Pubblicato il {{$item->created_at->format('d/m/Y')}} -  da {{$item->user->name ??''}}</p>
+                    <p class="card-text my-4">{{__('ui.descriptionRev')}}: {{$item->description}}</p>
+                    <p class="card-text my-5">{{__('ui.priceShow')}} : {{$item->price}} €</p>
+                    <a href="{{route('categoryShow',['category'=>$item->category])}}" class="my-2 border-top pt-2 border-light card-link shadow btn btn-primary">{{__('ui.categoryShow')}} : {{$item->category->name}}</a>
+                    <p class="card-footer">{{__('ui.publishedonRev')}} {{$item->created_at->format('d/m/Y')}} -  {{$item->user->name ??''}}</p>
                     
                 </div>
             </div>

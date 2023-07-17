@@ -9,7 +9,7 @@
                 <p class="col-md-6 col-6 card-text px-0">{{$item->price}}</p>
             </div>
             <div class="d-flex justify-content-around align-items-center">
-                <p class="col-md-5 col-5 my-0 text-start ms-2">Categoria:</p>
+                <p class="col-md-5 col-5 my-0 text-start ms-2">{{__('ui.category')}}</p>
                 <a href="{{route ('categoryShow',$item->category)}}" class="col-md-6 col-6 link-category-custom">{{$item->category->name}}</a>
             </div>
             <div class="d-flex justify-content-center my-2">
@@ -17,12 +17,12 @@
                     <span class="button-82-shadow"></span>
                     <span class="button-82-edge"></span>
                     <span class="button-82-front text">
-                        <a href="{{route ('item.show',$item)}}" class="link-custom">Visualizza</a>
+                        <a href="{{route ('item.show',$item)}}" class="link-custom">{{__('ui.view')}}</a>
                     </span>
                 </button>
             </div>
             <p class="card-footer text-center">{{$item->created_at->format('d/m/Y')}}</p>
-            <p class="text-center">Pubblicato da : {{$item->user->name ?? ''}}</p>
+            <p class="text-center">{{__('ui.releasedby')}}: {{$item->user->name ?? ''}}</p>
         </div>
     </div>
 </div>

@@ -8,7 +8,7 @@
       <span class="navbar-toggler-icon "></span>
     </button>    
     <form action="{{route('item.search')}}" class="d-flex col-md-7 col-6 mx-2" role="search">
-      <input name="searched" class="form-control input-custom me-2" type="search" placeholder="{{__('ui.search')}}
+      <input name="searched" class="form-control input-custom me-2" type="search" placeholder="{{__('ui.searchbox')}}
 " aria-label="Search">
       <button class="button-82-pushable" type="submit" role="button">
         <span class="button-82-shadow"></span>
@@ -40,7 +40,7 @@
           </a>
           <ul class="dropdown-menu"  aria-labelledby="categoriesDropdown">
             <li class="nav-item col-12 text-center">
-              <a class="nav-link" aria-current="page" href="{{route('item.create')}}">Aggiungi prodotto</a>
+              <a class="nav-link" aria-current="page" href="{{route('item.create')}}">{{__('ui.sellItemNav')}}</a>
             </li> 
             @auth
             @if(Auth::user()->is_revisor)

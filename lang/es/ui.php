@@ -2,26 +2,29 @@
 
 return [
     //navbar
-    'allAnnouncements' => 'Todos los anuncios!',
+    'allAnnouncements' => 'Todos nuestros anuncios',
     'price' => 'Precio',
     'myAdvertisements' => 'Mis anuncios',
     'advertisements' => 'Anuncios',
-    'reviewerArea' => 'Zona de auditor',
-    'signUp' => 'Regístrate',
+    'reviewerArea' => 'Área de revisores',
+    'signUp' => 'Registrarse',
+    'login' => 'Login',
     'categories' => 'Categorías',
-    'search' => 'Buscar en...',
+    'search' => 'Buscar...',
+    'searchbox' => 'Buscar...',
+    'sellItemNav' => 'Vender algo',
 
     //header
     'welcometo' => 'Bienvenido a',
-    'explore' => 'Exploras ',
-    'publish' => 'Publica',
+    'explore' => 'Explorar',
+    'publish' => 'Publicar',
     'clothing' => 'Ropa',
     'equipment' => 'Equipo',
     'music' => 'Música',
-    'motors' => 'Motocicleta',
-    'homeDecor' => 'Muebles',
-    'sport' => 'Deportes ',
-    'movies' => 'Película',
+    'motors' => 'Motor',
+    'homeDecor' => 'Decoración',
+    'sport' => 'Deportes',
+    'movies' => 'Películas',
     'technology' => 'Tecnología',
 
     //last
@@ -30,12 +33,60 @@ return [
     'view' => 'Ver',
     'releasedby' => 'Publicado por',
 
-
     //footer
-    'workwithus' => 'Quiere trabajar con nosotros',
-    'clickhere' => 'Pulse aquí',
+    'workwithus' => '¿Quieres trabajar con nosotros?',
+    'clickhere' => 'Haz clic aquí',
 
     //login page
-    'loginbtn' => 'Inicia sesión',
+    'loginbtn' => 'Iniciar sesión',
 
+    //categoryviews
+    'exploreCategory' => 'Explorar categoría ',
+    'noItemsCategory' => 'No hay artículos para esta categoría',
+    'publishinCategory' => 'Agregar un anuncio para ',
+    'newAnnCat' => 'Vender algo',
+
+    //Profile page
+    'helloProf' => 'Hola',
+    'yourAnnouncements' => 'Tus anuncios',
+    'userFrom' => 'Usuario desde',
+    'accountStatus' => 'Estado de la cuenta',
+    'articleTab' => 'Artículo',
+    'categoryTab' => 'Categoría',
+    'priceTab' => 'Precio',
+    'onlineFromTab' => 'En línea desde',
+    'announcementStatus' => 'Estado del anuncio',
+    'user' => 'Usuario',
+    'revisor' => 'Revisor',
+    'admin' => 'Administrador',
+    'fromTab' => 'De',
+    'dateTab' => 'Fecha',
+    'fastAcceptTab' => 'Aceptación Rápida',
+    'fastRejectTab' => 'Rechazo Rápido',
+    'acceptTab' => 'Aceptar',
+    'rejectTab' => 'Rechazar',
+    'nothingtoRevTab' => 'Nada para revisar',
+    'tobeReviewedDetails' => 'Detalles sobre los anuncios a revisar',
+    'anntoReview' => 'Anuncios a revisar',
+    'workZone' => 'Zona de trabajo',
+
+    //Revisor Zone
+'tobeReviewed' => 'Aquí tienes el anuncio para revisar',
+'articleNameRev' => 'Nombre del artículo',
+'descriptionRev' => 'Descripción',
+'publishedonRev' => 'Publicado el:',
+'publishedfromRev' => 'Publicado por',
+'revertRevisionbtn' => 'Revertir última revisión',
+'noItemsRevPage' => '¡No hay elementos para revisar!',
+'tryLaterRevPage' => '¡Inténtalo más tarde!',
+//Show
+'announcementShow'=>'Anuncio',
+'categoryShow'=>'Categoria',
+'priceShow'=>'Precio',
+//CreateForm
+'nameCreate' => 'Nombre',
+'categoryCreate' => 'Categoría',
+'priceCreate' => 'Precio',
+'descriptionCreate' => 'Descripción',
+'submitCreate' => 'Enviar',
 ];

@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12 p-1">
                 <h1 class="display-5">
-                    Ecco l'annuncio da revisionare
+                    {{__('ui.tobeReviewed')}}
                 </h1>
             </div>
         </div>
@@ -38,25 +38,27 @@
                 </div>
             </div>
             <div class="col-12 col-md-5 mt-3">
-                <h5 class="card-title my-3">Nome articolo: {{ $item_to_check->name }}</h5>
-                <p class="card-text">Descrizione: {{ $item_to_check->description }}</p>
-                <p class="card-footer mt-5">Pubblicato il: {{ $item_to_check->created_at->format('d/m/Y') }}</p>
-                <p class="card-text">Pubblicato da: {{ $item_to_check->user->name }}</p>
+                <h5 class="card-title my-3">{{__('ui.articleNameRev')}}: {{ $item_to_check->name }}</h5>
+                <p class="card-text">{{__('ui.descriptionRev')}}: {{ $item_to_check->description }}</p>
+                <p class="card-text my-3">{{__('ui.priceShow')}} : {{$item_to_check->price}} €</p>
+                <a href="{{route('categoryShow',['category'=>$item_to_check->category])}}" class="border-top border-light card-link shadow btn btn-primary">{{__('ui.categoryShow')}} : {{$item_to_check->category->name}}</a>
+                <p class="card-footer mt-3">{{__('ui.publishedonRev')}}: {{ $item_to_check->created_at->format('d/m/Y') }}</p>
+                <p class="card-text">{{__('ui.publishedfromRev')}}: {{ $item_to_check->user->name }}</p>
                 <div class="d-flex justify-content-between">
                     <form action="{{ route('revisor.accept_item', ['item' => $item_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-success shadow">Accetta</button>
+                        <button class="btn btn-success shadow">{{__('ui.acceptTab')}}</button>
                     </form>
                     <form action="{{ route('revisor.reject_item', ['item' => $item_to_check]) }}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-danger shadow">Rifiuta</button>
+                        <button class="btn btn-danger shadow">{{__('ui.rejectTab')}}</button>
                     </form>
                     @if ($last_accepted_or_rejected_item)
                     <form action="{{ route('revisor.undoAction') }}" method="POST">
                         @csrf
-                        <button class="btn btn-warning shadow">Annulla l'ultima revisione</button>
+                        <button class="btn btn-warning shadow">{{__('ui.revertRevisionbtn')}}</button>
                     </form>
                 @endif
                 </div>
@@ -69,13 +71,13 @@
             <div class="row">
                 <div class="col-12 p-1">
                     <h1 class="display-5">
-                        Non ci sono annunci da revisionare!
+                        {{__('ui.noItemsRevPage')}}
                     </h1>
-                    <h3>Prova più tardi</h3>
+                    <h3>{{__('ui.tryLaterRevPage')}}</h3>
                     @if ($last_accepted_or_rejected_item)
                         <form action="{{ route('revisor.undoAction') }}" method="POST">
                             @csrf
-                            <button class="btn btn-warning shadow">Annulla l'ultima revisione</button>
+                            <button class="btn btn-warning shadow">{{__('ui.revertRevisionbtn')}}</button>
                         </form>
                     @endif
                 </div>
