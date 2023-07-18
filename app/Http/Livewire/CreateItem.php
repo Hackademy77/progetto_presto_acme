@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use App\Models\Item;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateItem extends Component
 {
@@ -63,26 +65,36 @@ class CreateItem extends Component
         
         
         $this->validate();
+        // $category = Category::find($this->category_id);
+        // $this->item->category()->associate($category);
 
-        $this->item = new Item([
+        $this->item = Item::create([
             'name' => $this->name,
             'description' => $this->description,
             'price' => $this->price,
             'user_id' => Auth::id(),
+            'category_id' => $this->category_id,
         ]);
+
+        
     
-        $category = Category::find($this->category_id);
-        $this->item->category()->associate($category);
-    
-        $this->item->save();
        
         
         if(count($this->images)){
             foreach ($this->images as $image) {
-                $this->item->images()->create(['path' => $image->store('images', 'public')]);
+                // $this->item->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "items/{$this->item->id}";
+                $newImage = $this->item->images()->create(['path'=>$image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path ,300 ,200));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
   
         }
+
+        // $this->item->Auth::user()->id;
+
 
         
         session()->flash('message', 'Articolo inserito con successo, sarà pubblicato dopo la revisione');
