@@ -14,9 +14,18 @@
         <div class="row justify-content-evenly">
             <div class="col-12 col-md-5">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                 @if($item_to_check->images)   
+                <div class="carousel-inner">
+                    @foreach($item_to_check->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="Storage::url($image()->path) : 'https://picsum.photos/200'}}" class="d-block w-100" alt="...">
+                        </div>
+                    @endforeach
+                    </div>  
+                    @else 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://picsum.photos/500" class="d-block w-100" alt="...">
+                            <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
@@ -25,6 +34,7 @@
                             <img src="https://picsum.photos/502" class="d-block w-100" alt="...">
                         </div>
                     </div>
+                    @endif
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
