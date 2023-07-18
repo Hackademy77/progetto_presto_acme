@@ -92,7 +92,7 @@ class CreateItem extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
   
         }
-
+        $this->item->save();
         // $this->item->Auth::user()->id;
 
 
@@ -112,7 +112,7 @@ class CreateItem extends Component
 
         $this->name = '';
         $this->description = '';
-        $this->category = '';
+        $this->category_id = '';
         $this->price = '';
         $this->images = [];
         $this->temporary_images = [];

@@ -18,7 +18,7 @@
                 <div class="carousel-inner">
                     @foreach($item_to_check->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="Storage::url($image()->path) : 'https://picsum.photos/200'}}" class="d-block w-100" alt="...">
+                            <img src={{!$item_to_check->images()->get()->isEmpty() ? $item_to_check->images()->first()->getUrl(300, 200) : 'https://picsum.photos/200'}} class="d-block w-100" alt="...">
                         </div>
                     @endforeach
                     </div>  

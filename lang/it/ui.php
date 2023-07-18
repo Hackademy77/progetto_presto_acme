@@ -6,13 +6,13 @@ return [
     'price' => 'Prezzo',
     'myAdvertisements' => 'I miei annunci',
     'advertisements' => 'Annunci',
-    'reviewerArea' => "Area dell'arbitro",
+    'reviewerArea' => "Zona Revisore",
     'signUp' => 'Iscriviti',
     'login' => 'Accedi',
     'categories' => 'Categorie',
     'search' => 'Cerca...',
     'searchbox' => 'Cerca...',
-    'sellItemNav' => 'Vendi qualcosa',
+    'sellItemNav' => 'Pubblica un annuncio',
     
     //header
     'welcometo' => 'Benvenuto su',
@@ -30,7 +30,7 @@ return [
     //last
     'latestarticles' => 'Ultimi articoli',
     'category' => 'Categoria',
-    'view' => 'Vista',
+    'view' => 'Visualizza',
     'releasedby' => 'Pubblicato da',
     
     //footer
@@ -44,7 +44,7 @@ return [
     'exploreCategory' => 'Esplora la categoria ',
     'noItemsCategory' => 'Non ci sono annunci per questa categoria',
     'publishinCategory' => 'Aggiungi un annuncio per ',
-    'newAnnCat' => 'Vendi qualcosa',
+    'newAnnCat' => 'Pubblica qualcosa',
     
     //Profile page
     'helloProf' => 'Ciao',

@@ -1,6 +1,6 @@
 <div class="col-12 col-md-4 d-flex justify-content-evenly">
     <div class="card shadow card-custom">
-        <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200'}}" class="rounded mx-2 mt-2 mb-4" alt="...">
+        <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(300, 200) : 'https://picsum.photos/200'}}" class="rounded mx-2 mt-2 mb-4 img-fluid" alt="...">
         <div>
             <h5 class="card-title text-center">{{$item->name}}</h5>
             <p class="card-text text-center">{{$item->description}}</p>
