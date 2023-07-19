@@ -26,6 +26,9 @@ return [
     'sport' => 'Sport',
     'movies' => 'Film',
     'technology' => 'Tecnologia',
+
+    'ourCategories'=>'Sfoglia le categorie',
+    'selectCategoryPlaceholder' => 'Scegli una categoria..',
     
     //last
     'latestarticles' => 'Ultimi articoli',

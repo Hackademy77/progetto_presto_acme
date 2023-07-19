@@ -1,4 +1,7 @@
 <x-layout>
+    <x-navbar/>
+    
+    
     <div class="container col-12 col-md-6 d-flex flex-column align-items-center justify-content-around login-card rounded">
         <div class="row py-3 align-items-center">
             <h2>{{__('ui.login')}}</h2>
@@ -18,17 +21,17 @@
                 @csrf
                     <div class="mb-3 text-center d-flex flex-column align-items-center">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" name="email" class="w-75 rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" name="email" class="w-50 rounded-pill" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3 text-center d-flex flex-column align-items-center">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" name="password" class="w-75 rounded-pill" id="exampleInputPassword1">
+                        <input type="password" name="password" class="w-50 rounded-pill text-center" id="exampleInputPassword1">
                     </div>
                     <div class="d-flex justify-content-center my-3">
-                        <button class="button-82-pushable mt-4" type="submit" role="button">
-                        <span class="button-82-shadow"></span>
-                        <span class="button-82-edge"></span>
-                        <span class="button-82-front text">
+                        <button class="btn-cardz btn-one rounded mt-4" type="submit" role="button">
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class="">
                         {{__('ui.loginbtn')}}
                         </span>
                         </button>

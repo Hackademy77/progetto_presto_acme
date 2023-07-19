@@ -1,6 +1,6 @@
 <div class="col-12 col-md-4 d-flex justify-content-evenly">
-    <div class="card shadow card-custom">
-        <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(300, 200) : 'https://picsum.photos/200'}}" class="rounded mx-2 mt-2 mb-4 img-fluid" alt="...">
+    <div class="card card-custom">
+        <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(300, 200) : 'https://picsum.photos/300/200'}}" class="rounded mx-2 mt-2 mb-4 img-fluid" alt="...">
         <div>
             <h5 class="card-title text-center">{{$item->name}}</h5>
             <p class="card-text text-center">{{$item->description}}</p>
@@ -13,13 +13,12 @@
                 <a href="{{route ('categoryShow',$item->category)}}" class="col-md-6 col-6 link-category-custom">{{$item->category->name}}</a>
             </div>
             <div class="d-flex justify-content-center my-2">
-                <button class="button-82-pushable mt-4" type="submit" role="button">
-                    <span class="button-82-shadow"></span>
-                    <span class="button-82-edge"></span>
-                    <span class="button-82-front text">
-                        <a href="{{route ('item.show',$item)}}" class="link-custom">{{__('ui.view')}}</a>
-                    </span>
-                </button>
+                <a href="{{route ('item.show',$item)}}" class="link-custom"><button class="btn-cardz btn-one rounded mt-4" type="submit" role="button">
+                    
+                    {{__('ui.view')}}
+                    
+                </button></a>
+                
             </div>
             <p class="card-footer text-center">{{$item->created_at->format('d/m/Y')}}</p>
             <p class="text-center">{{__('ui.releasedby')}}: {{$item->user->name ?? ''}}</p>

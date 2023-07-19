@@ -1,10 +1,11 @@
 <x-layout>
-    
+    <x-navbar/>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-3 pt-5 shadow bg-light rounded custom-height-profile">
                 
                     <h3 class="text-center mt-5">{{__('ui.helloProf')}}, <span class="colorRed">{{Auth::user()->name}}</span>.</h3>
+                    
                     <div class="row">
                     <ul class="py-4 ">
                         <li class="py-4 text-center text-md-start">{{__('ui.userFrom')}} : {{Auth::user()->created_at}}</li>
@@ -18,7 +19,13 @@
                             {{__('ui.accountStatus')}} : <span class="text-success">{{__('ui.user')}}</span>
                         </li>
                         @endif
+                        <li class="py-4 text-center text-md-start"><p>Logout</p>
+                            <form action="{{route('logout')}}" method="post" class="nav-link ">
+                                @csrf
+                                <button class="justify-content-center text-center align-self-center button-logout" type="submit"><i class="fa-solid fa-sign-out fa-xl"></i></button>
+                            </form></li>
                     </ul>
+                    
                 </div>
                 
             </div>
@@ -84,9 +91,15 @@
                                         <div class="col-12 text-center mt-5">
                                             <h2 class="text-success mb-5">{{__('ui.workZone')}}</h2>
                                             <h2 class="mb-4">{{__('ui.anntoReview')}}</h2>
-                                            <p class="text-center">
-                                                <a href="{{ route('revisor.index', ['item' => $item]) }}" class="btn btn-primary">{{__('ui.tobeReviewedDetails')}}</a>
-                                            <p>
+                                            
+                                                <div class="row justify-content-center">
+                                                    <div class="col-8 col-md-8">
+                                                        <a href="{{ route('revisor.index', ['item' => $item]) }}"><button class="btn-uzerz btn-one-user rounded">{{__('ui.tobeReviewedDetails')}}</button></a>
+                                                    </div>
+                                                    
+                                                </div>
+                                                
+                                            
                                         </div>
                                     </div>
                                 </div>

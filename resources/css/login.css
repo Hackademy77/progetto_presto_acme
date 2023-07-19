@@ -1,7 +1,9 @@
 .login-card {
-    border: 3px solid #f0003c;
-    box-shadow: 0px 0px 50px #f57875;
+    border: 1px solid #8a0020;
+    box-shadow: 0px 0px 10px #8a0020;
     margin: 10vh auto;
-    background-color: #f57875; 
+    background-color: #ffffff; 
+    color: #8a0020;
+    text-align: center;
 }
 

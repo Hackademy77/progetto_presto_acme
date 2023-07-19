@@ -27,6 +27,9 @@ return [
     'movies' => 'Movies',
     'technology' => 'Technology',
 
+    'ourCategories'=>'Browser our categories',
+    'selectCategoryPlaceholder' => 'Select a category..',
+
     //last
     'latestarticles' => 'Latest articles',
     'category' => 'Category',

@@ -1,4 +1,5 @@
 <x-layout>
+    <x-navbar/>
     <div class="container col-12 col-md-6 d-flex flex-column align-items-center justify-content-around login-card rounded">
         <div class="row py-3 align-items-center">
             <h2>Registrati</h2>
@@ -33,7 +34,7 @@
                             <input type="password" name="password_confirmation" class="w-75 rounded-pill">
                     </div>
                     <div class="d-flex justify-content-center my-3">
-                        <button class="button-82-pushable mt-4" type="submit" role="button">
+                        <button class="btn-cardz btn-one rounded mt-4" type="submit" role="button">
                             <span class="button-82-shadow"></span>
                             <span class="button-82-edge"></span>
                             <span class="button-82-front text">

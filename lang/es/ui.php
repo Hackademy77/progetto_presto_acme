@@ -46,6 +46,8 @@ return [
     'publishinCategory' => 'Agregar un anuncio para ',
     'newAnnCat' => 'Vender algo',
 
+    'selectCategoryPlaceholder' => 'Seleciona una categoria..',
+
     //Profile page
     'helloProf' => 'Hola',
     'yourAnnouncements' => 'Tus anuncios',
