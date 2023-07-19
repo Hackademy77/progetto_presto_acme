@@ -13,7 +13,7 @@
     
     <div class="container mb-5 pb-5">
         <div class="row justify-content-between mt-3 h-75">
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-md-4">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade">
                     <div class="carousel-inner">
     
@@ -51,7 +51,7 @@
                         </button>
                     </div>
             </div>
-            <div class="col-12 col-md-6 mt-3">
+            <div class="col-12 col-md-4 mt-3">
                 <h4 class="card-title my-3">{{__('ui.articleNameRev')}}: {{ $item_to_check->name }}</h4>
                 <p class="card-text fs-5">{{__('ui.descriptionRev')}}: {{ $item_to_check->description }}</p>
                 <p class="card-text my-3 fs-5">{{__('ui.priceShow')}} : {{$item_to_check->price}} €</p>
@@ -79,7 +79,36 @@
             </div>
             
         </div>
-    
+
+        <div class="col-12 col-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 border-end">
+            <h5 class="mt-3">Tags</h5>
+            <div class="p-2">
+                @if ($image->labels)
+                    @foreach ($image->labels as $label)
+                        <p class="d-inline">{{$label}},</p>
+                    @endforeach
+                @endif
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card-body">
+                <h5 class="tc-accent">Revisione Immagini</h5>
+                <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                <p>Contenuti Razziali: <span class="{{$image->racy}}"></span></p>
+            </div>
+
+    </div>
+            </div>
+        </div>
+        </div>
+        
+
         @else
         <div class="container-fluid pt-5 bg-gradient shadow mb-1 pb-5 mt-5">
             <div class="row justify-content-center text-center">
