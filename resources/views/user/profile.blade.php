@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-12 col-md-3 pt-5 shadow bg-light rounded custom-height-profile">
                 
@@ -21,7 +21,7 @@
                         <li class="py-4 text-center text-md-start"><p>Logout</p>
                             <form action="{{route('logout')}}" method="post" class="nav-link ">
                                 @csrf
-                                <button class="justify-content-center text-center align-self-center button-logout" type="submit"><i class="fa-solid fa-sign-out fa-xl"></i></button>
+                                <button class="justify-content-center text-center align-self-center logout-custom" type="submit"><i class="fa-solid fa-sign-out fa-xl"></i></button>
                             </form></li>
                     </ul>
                     

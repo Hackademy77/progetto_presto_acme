@@ -13,6 +13,7 @@ return [
     'search' => 'Buscar...',
     'searchbox' => 'Buscar...',
     'sellItemNav' => 'Vender algo',
+    'lang'=>'Idioma',
 
     //header
     'welcometo' => 'Bienvenido a',
@@ -39,6 +40,7 @@ return [
 
     //login page
     'loginbtn' => 'Iniciar sesión',
+    'register' => 'Registrarse',
 
     //categoryviews
     'exploreCategory' => 'Explorar categoría ',
@@ -46,6 +48,7 @@ return [
     'publishinCategory' => 'Agregar un anuncio para ',
     'newAnnCat' => 'Vender algo',
 
+    'ourCategories'=>'Categorias',
     'selectCategoryPlaceholder' => 'Seleciona una categoria..',
 
     //Profile page
@@ -91,4 +94,8 @@ return [
 'priceCreate' => 'Precio',
 'descriptionCreate' => 'Descripción',
 'submitCreate' => 'Enviar',
+'deletebtn'=>'Borrar',
+
+//search
+
 ];

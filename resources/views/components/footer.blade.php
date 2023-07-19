@@ -1,9 +1,9 @@
 <div class="text-center footer-custom pt-4">
-    <p class="lead text-light">Vuoi lavorare con noi?</p>
+    <p class="lead text-light">{{__('ui.workwithus')}}?</p>
     <div>
         <div class="box-3">
-            <div class="btn-footer btn-three">
-              <a href="{{route('form.revisor')}}" class="nav-link">Clicca qui</a>
+            <div class="btn-footer btn-three fw-bold py-0 mt-0">
+              <a href="{{route('form.revisor')}}" class="nav-link">{{__('ui.clickhere')}}</a>
             </div>
           </div>
     </div>

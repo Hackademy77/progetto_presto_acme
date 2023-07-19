@@ -13,6 +13,7 @@ return [
     'search' => 'Cerca...',
     'searchbox' => 'Cerca...',
     'sellItemNav' => 'Pubblica un annuncio',
+    'lang'=>'Lingua',
     
     //header
     'welcometo' => 'Benvenuto su',
@@ -42,6 +43,7 @@ return [
     
     //login page
     'loginbtn' => 'Accedi',
+    'register' => 'Registrati',
     
     //categoryviews
     'exploreCategory' => 'Esplora la categoria ',
@@ -94,4 +96,7 @@ return [
 'priceCreate'=>'Prezzo',
 'descriptionCreate'=>'Descrizione',
 'submitCreate'=>'Invia',
+'deletebtn'=>'Cancella',
+//Search
+'backtoHomebtn'=> 'Torna alla home'
 ];

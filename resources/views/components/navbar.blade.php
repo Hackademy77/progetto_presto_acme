@@ -21,17 +21,17 @@
         </ul>
       </li>
       @if(Auth::user() != null)
-        <li class="nav-item dropdown col-md-3 text-center">
+        <li class="nav-item dropdown  col-md-3 text-center">
           <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{__('ui.myAdvertisements')}}
           </a>
-          <ul class="dropdown-menu"  aria-labelledby="categoriesDropdown">
+          <ul class="dropdown-menu menu-custom "  aria-labelledby="categoriesDropdown">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="{{route('item.create')}}">{{__('ui.sellItemNav')}}</a>
             </li> 
             @auth
             @if(Auth::user()->is_revisor)
-            <li class="nav-item col-md-2 ">
+            <li class="nav-item col-md-12 ">
                 <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.reviewerArea')}}
                 <span class="" >{{App\Models\Item::toBeRevisionedCount()}} <span class="visually-hidden">unread messages</span></span>
                 </a>
@@ -46,7 +46,7 @@
       </li>
       <li class="nav-item dropdown col-md-2 text-center ">
         <a class="nav-link dropdown-toggle " href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Lingua
+          {{__('ui.lang')}}
         </a>
         <ul class="dropdown-menu menu-custom"  aria-labelledby="categoriesDropdown">
           <li class="nav-item text-center">

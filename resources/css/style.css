@@ -26,9 +26,10 @@ ul {
 
 .img-preview {
 
-    height: 200px;
-    width: 200px;
-    object-fit: contain;
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .btn-uzerz {
@@ -108,4 +109,14 @@ ul {
     letter-spacing: 2px;
     font-weight: bold;
     color: black;
+  }
+
+  button{
+    border: none;
+  }
+
+  button:hover {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
   }

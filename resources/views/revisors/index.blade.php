@@ -1,7 +1,7 @@
 <x-layout>
     
     @if ($item_to_check)
-    <div class="container-fluid p-5 bg-gradient  shadow mb-1">
+    <div class="container-fluid p-5 bg-gradient  shadow mb-1 mt-5">
         <div class="row">
             <div class="col-12 p-1">
                 <h1 class="display-5">
@@ -81,8 +81,8 @@
         </div>
     
         @else
-        <div class="container-fluid p-5 bg-gradient shadow mb-1">
-            <div class="row">
+        <div class="container-fluid pt-5 bg-gradient shadow mb-1 pb-5 mt-5">
+            <div class="row justify-content-center text-center">
                 <div class="col-12 p-1">
                     <h1 class="display-5">
                         {{__('ui.noItemsRevPage')}}
@@ -91,7 +91,7 @@
                     @if ($last_accepted_or_rejected_item)
                         <form action="{{ route('revisor.undoAction') }}" method="POST">
                             @csrf
-                            <button class="btn btn-warning shadow">{{__('ui.revertRevisionbtn')}}</button>
+                            <button class="btn btn-warning my-5 shadow">{{__('ui.revertRevisionbtn')}}</button>
                         </form>
                     @endif
                 </div>

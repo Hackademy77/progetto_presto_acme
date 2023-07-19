@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid shadow pt-3">
+    <div class="container-fluid shadow pt-3 mt-5">
         <div class="row">
             <div class="col-12">
                 <h4 class="display-5 text-center">{{__('ui.exploreCategory')}} : {{$category->name}}</h1>

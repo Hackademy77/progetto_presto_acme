@@ -3,10 +3,10 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-3"> 
-            <div class="mt-5 ms-5 ps-5"><a href="/" class="btn btn-primary shadow ">Torna alla Home</a>
+            <div class="mt-5 ms-5 ps-5"><a href="/"><button class=" shadow btn-cardz btn-one rounded">{{__('ui.backtoHomebtn')}}</button></a>
             </div>
         </div>
     </div>

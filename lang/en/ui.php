@@ -4,8 +4,8 @@ return [
     //navbar
     'allAnnouncements' => 'Here\'s all our announcements!',
     'price' => 'Price',
-    'myAdvertisements' => 'My advertisements',
-    'advertisements' => 'Advertisements',
+    'myAdvertisements' => 'My Announcements',
+    'advertisements' => 'Announcements',
     'reviewerArea' => 'Reviewer\'s area',
     'signUp' => 'Sign Up',
     'login' => 'Login',
@@ -13,6 +13,7 @@ return [
     'search' => 'Search...',
     'searchbox' => 'Search...',
     'sellItemNav' => 'Sell something',
+    'lang'=>'Language',
 
     //header
     'welcometo' => 'Welcome to',
@@ -27,7 +28,7 @@ return [
     'movies' => 'Movies',
     'technology' => 'Technology',
 
-    'ourCategories'=>'Browser our categories',
+    'ourCategories'=>'Browse our categories',
     'selectCategoryPlaceholder' => 'Select a category..',
 
     //last
@@ -42,6 +43,7 @@ return [
 
     //login page
     'loginbtn' => 'Login',
+    'register' => 'Register',
     
     //categoryviews
     'exploreCategory' => 'Explore category ',
@@ -103,6 +105,10 @@ return [
 'priceCreate' => 'Price',
 'descriptionCreate' => 'Description',
 'submitCreate' => 'Submit',
+'deletebtn'=>'Delete',
+
+//search
+'backtoHomebtn'=> 'Return to Homepage'
 ];
 
 
