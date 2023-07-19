@@ -1,5 +1,4 @@
 <x-layout>
-    <x-navbar/>
 <div class="my-5">
     <h2 class="text-center">Candidati come Revisore</h2>
 </div>

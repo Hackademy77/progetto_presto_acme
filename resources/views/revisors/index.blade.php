@@ -1,5 +1,4 @@
 <x-layout>
-    <x-navbar/>
     
     @if ($item_to_check)
     <div class="container-fluid p-5 bg-gradient  shadow mb-1">

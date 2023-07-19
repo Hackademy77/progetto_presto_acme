@@ -1,5 +1,4 @@
 <x-layout>
-    <x-navbar/>
     <div class="container col-12 col-md-6 d-flex flex-column align-items-center justify-content-around login-card rounded">
         <div class="row py-3 align-items-center">
             <h2>Registrati</h2>

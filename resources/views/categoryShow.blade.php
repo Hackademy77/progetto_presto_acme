@@ -1,5 +1,4 @@
 <x-layout>
-    <x-navbar/>
     <div class="container-fluid shadow pt-3">
         <div class="row">
             <div class="col-12">

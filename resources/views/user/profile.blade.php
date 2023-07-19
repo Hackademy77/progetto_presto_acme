@@ -1,5 +1,4 @@
 <x-layout>
-    <x-navbar/>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-3 pt-5 shadow bg-light rounded custom-height-profile">
