@@ -23,6 +23,7 @@ Route::get('/', [FrontController::class, "welcome"])->name('home');
 Route::get('/items/create', [ItemController::class, 'create'])->middleware('auth')->name('item.create');
 Route::get('/detail/item/{item}', [ItemController::class, 'showItem'])->name('item.show');
 Route::get('/all/items', [ItemController::class, 'indexItem'])->name('item.index');
+Route::delete('/items/delete/{item}',[ItemController::class, 'delete'])->middleware('auth')->name('item.delete');
 
 //Rotte FrontController
 Route::get('/search/items', [FrontController::class, 'searchItems'])->name('item.search');

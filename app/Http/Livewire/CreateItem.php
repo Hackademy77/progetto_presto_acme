@@ -96,11 +96,11 @@ class CreateItem extends Component
                     new GoogleVisionLabelImage($newImage->id),
                 ])->dispatch($newImage->id);
                 
-                    dispatch(new Watermarks($newImage->id));
+
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
-  
+
         }
         $this->item->save();
         // $this->item->Auth::user()->id;

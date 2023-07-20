@@ -81,14 +81,14 @@
 }
 
 .menu5 li:after {
-  bottom: 25%;
+  bottom: 40%;
   left: 0;
 }
 
-.menu5 li:before {
+/* .menu5 li:before {
   top: 25%;
   right: 0;
-}
+} */
 
 .menu5 li:hover::after {
   width: 100%;
@@ -96,12 +96,12 @@
   bottom: 25%;
   background-color: white;
 }
-.menu5 li:hover::before {
+/* .menu5 li:hover::before {
   width: 100%;
   height: 1px;
   top: 25%;
   background-color: white;
-}
+} */
 
 .nav-link{
   color: white;

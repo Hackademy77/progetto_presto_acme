@@ -16,13 +16,13 @@
                     <div class="carousel-inner rounded">
                         @if ($item_to_check->images->isEmpty())
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/300/201" class="d-block w-100" alt="...">
+                                <img src="{{asset('/storage/img/placeholderPresto.jpg')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/300/202" class="d-block w-100" alt="...">
+                                <img src="{{asset('/storage/img/placeholderPresto.jpg')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/300/203" class="d-block w-100" alt="...">
+                                <img src="{{asset('/storage/img/placeholderPresto.jpg')}}" class="d-block w-100" alt="...">
                             </div>
                         @else
                             @foreach($item_to_check->images as $image)
@@ -50,7 +50,7 @@
                 <br>
                 <h5 class="">Tags</h5>
                 <div class="p-2">
-                    @if ($image->labels)
+                    @if (!empty($image) && $image->labels)
                         @foreach ($image->labels as $label)
                             <p class="d-inline">{{$label}},</p>
                         @endforeach
@@ -62,12 +62,14 @@
                     <br>
                     <br>
                     <br>
+                    @if (!empty($image))
                     <h5 class="tc-accent">Revisione Immagini</h5>
                     <p>Adulti: <span class="{{$image->adult}}"></span></p>
                     <p>Satira: <span class="{{$image->spoof}}"></span></p>
                     <p>Medicina: <span class="{{$image->medical}}"></span></p>
                     <p>Violenza: <span class="{{$image->violence}}"></span></p>
                     <p>Contenuti Razziali: <span class="{{$image->racy}}"></span></p>
+                    @endif
                 </div>
             </div>
         </div>

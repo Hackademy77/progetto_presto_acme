@@ -39,7 +39,8 @@
                                         <table class="table table-striped table-revision">
                                             <thead>
                                                 <tr class="fw-light">
-                                                    <th scope="col">#</th>
+                                                    {{-- <th scope="col">#</th> --}}
+                                                    <th scope="col"></th>
                                                     <th scope="col">{{__('ui.articleTab')}}</th>
                                                     <th scope="col">{{__('ui.categoryTab')}}</th>
                                                     <th scope="col">{{__('ui.priceTab')}}</th>
@@ -51,7 +52,15 @@
                                             <tbody>
                                                 @foreach (Auth::user()->items as $item)
                                                 <tr>
-                                                    <th scope="row">{{$item->id}}</th>
+                                                    <form action="{{route('item.delete', $item)}}" method="post">
+                                                    {{-- <td scope="row">{{$item->id}}</th> --}}
+                                                    <td>
+                                                        @method('DELETE')
+                                                            @csrf
+                                                            
+                                                            <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                                        </td>
+                                                    </form>
                                                     <td><a href="{{route ('item.show',$item)}}">{{$item->name}}</a></td>
                                                     <td><a href="{{route ('categoryShow',$item->category)}}">{{$item->category->name}}</a></td>
                                                     <td>{{$item->price}}€</td>

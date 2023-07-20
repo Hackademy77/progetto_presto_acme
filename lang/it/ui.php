@@ -99,5 +99,17 @@ return [
 'submitCreate'=>'Invia',
 'deletebtn'=>'Cancella',
 //Search
-'backtoHomebtn'=> 'Torna alla home'
+'backtoHomebtn'=> 'Torna alla home',
+
+//Category
+'Motori' => 'Motori',
+'Abbigliamento' => 'Abbigliamento',
+'Arredamento' => 'Arredamento',
+'Tecnologia' => 'Tecnologia',
+'Musica' => 'Musica',
+'Attrezzatura' => 'Attrezzatura',
+'Sports' => 'Sports',
+'Film' => 'Film',
+
+
 ];

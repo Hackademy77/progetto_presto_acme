@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class ItemController extends Controller
 {
@@ -63,8 +65,13 @@ class ItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Item $item)
+    public function delete(Item $item)
     {
-        //
+        File::deleteDirectory(storage_path('/app/public/items/' . $item->id));
+        
+        $item->delete();
+        
+        return redirect ()->route('user.profile')->with('message', 'Annuncio eliminato con successo');
+        
     }
 }

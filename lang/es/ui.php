@@ -97,6 +97,13 @@ return [
 'submitCreate' => 'Enviar',
 'deletebtn'=>'Borrar',
 
-//search
-
+//cat
+'Motori' => 'Motor',
+'Abbigliamento' => 'Ropa',
+'Arredamento' => 'Muebles',
+'Tecnologia' => 'Tecnología',
+'Musica' => 'Música',
+'Attrezzatura' => 'Equipamiento',
+'Sports' => 'Deportes',
+'Film' => 'Películas',
 ];

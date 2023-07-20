@@ -46,23 +46,23 @@
 <div class="container" id="mySection">
     <div class="row justify-content-around cst-contatori my-5 py-3">
         <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom">
-            <i class="fa-regular fa-calendar fs-2 fa-xl my-4" style="color: #8a0020;"></i>
-            <div class="d-flex flex-column">
-                <h5>Since:</h5> 
+            <i class="fa-regular fa-calendar fs-1 fa-xl my-4" style="color: #8a0020;"></i>
+            <div class="d-flex flex-column fs-2">
+                <h4>Since</h5> 
                 <span id="counter1"></span>
             </div> 
         </div>
         <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom">
-            <i class="fa-regular fa-eye my-4 fs-2" style="color: #8a0020;"></i>
-            <div class="d-flex flex-column">
-                <h5>Visualizzazioni: </h5>
+            <i class="fa-regular fa-eye my-4 fs-1" style="color: #8a0020;"></i>
+            <div class="d-flex flex-column fs-2">
+                <h4>Visualizzazioni </h5>
                 <span id="counter2"></span>
             </div> 
         </div>
         <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom">
-            <i class="fa-solid fa-cart-shopping my-4 fs-2" style="color: #8a0020;"></i>
-            <div class="d-flex flex-column">    
-                <h5>Clienti: </h5> 
+            <i class="fa-solid fa-cart-shopping my-4 fs-1" style="color: #8a0020;"></i>
+            <div class="d-flex flex-column fs-2">    
+                <h4>Clienti </h5> 
                 <span id="counter3"></span>
             </div>
         </div>

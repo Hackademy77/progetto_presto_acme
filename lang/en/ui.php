@@ -1,4 +1,5 @@
 <?php
+use App\Models\Category;
 
 return [
     //navbar
@@ -109,7 +110,18 @@ return [
 'deletebtn'=>'Delete',
 
 //search
-'backtoHomebtn'=> 'Return to Homepage'
+'backtoHomebtn'=> 'Return to Homepage',
+
+
+'Motori' => 'Motors',
+'Abbigliamento' => 'Clothing',
+'Arredamento' => 'Furniture',
+'Tecnologia' => 'Technology',
+'Musica' => 'Music',
+'Attrezzatura' => 'Equipment',
+'Sports' => 'Sports',
+'Film' => 'Movies',
+
 ];
 
 

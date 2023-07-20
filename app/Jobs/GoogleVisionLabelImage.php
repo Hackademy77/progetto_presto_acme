@@ -30,7 +30,7 @@ class GoogleVisionLabelImage implements ShouldQueue
     public function handle(): void
     {
         $i = Image::find($this->item_image_id);
-
+        
         $image = file_get_contents(storage_path('app/public/' . $i->path));
 
         putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('GOOGLE_CREDENTIAL.json'));

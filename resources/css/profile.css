@@ -3,6 +3,11 @@
     overflow-x: auto;
 }
 
+.fa-sign-out:hover{
+    color: red;
+    transform: scale(1.05);
+}
+
 
 @media (min-width: 767.98px) {
     .custom-height-profile {

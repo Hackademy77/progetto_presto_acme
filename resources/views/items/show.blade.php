@@ -16,13 +16,13 @@
                             @if ($item->images->isEmpty())
                             
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/300/200" class="d-block w-100" alt="...">
+                                <img src="{{asset('/storage/img/placeholderPresto.jpg')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/300/201" class="d-block w-100" alt="...">
+                                <img src="{{asset('/storage/img/placeholderPresto.jpg')}}" class="d-block w-100" alt="...">>
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/300/202" class="d-block w-100" alt="...">
+                                <img src="{{asset('/storage/img/placeholderPresto.jpg')}}" class="d-block w-100" alt="...">
                             </div>
                             @else
                             
