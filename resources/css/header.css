@@ -465,3 +465,19 @@ div[class*=box] {
   line-height: 1.4;
   word-spacing: 100vw;
 }
+
+
+/* COUNTER */
+
+/* .divisor-counter-1 {
+  border-right: 3px solid #8a0020;
+}
+
+.divisor-counter-2 {
+  border-left: 3px solid #8a0020;
+} */
+
+
+.shadow-custom{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;  
+}
