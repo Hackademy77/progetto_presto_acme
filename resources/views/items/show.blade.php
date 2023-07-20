@@ -1,17 +1,17 @@
 <x-layout>
-    <x-navbar/>
     <div class="container-fluid p-4 shadow mb-3 mt-5">
         <div class="row justify-content-between">
-            <div class="col-12 p-2 mt-1">
+            <div class="col-12 p-2 mt-3">
                 <h2 class="display-5 text-center">{{__('ui.announcementShow')}}: {{$item->name}}</h1>
                 </div>
             </div>
     </div>
-    <div class="container mt-3 px-3 pt-0 border shadow">
-            <div class="row mt-3 justify-content-evenly">
-                <div class="col-12 col-md-7 align-items-center pb-3">
+    
+    <div class="container my-5 px-3 pt-0 shadow-custom">
+            <div class="row mt-3 justify-content-evenly align-items-center">
+                <div class="col-12 col-md-7 pb-3">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                        <div class="carousel-inner rounded">
+                        <div class="carousel-inner rounded ">
                             
                             @if ($item->images->isEmpty())
                             

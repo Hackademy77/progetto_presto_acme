@@ -1,4 +1,36 @@
-<div class="col-12 col-md-4 d-flex justify-content-evenly">
+<div class="container" style="margin-top:50px; margin-bottom:50px;">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card-sl">
+          <div class="card-image d-flex justify-content-center">
+            <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(300, 200) : asset('/storage/img/placeholderPresto.jpg')}}" class="img-fluid" alt="...">
+        </div>
+  
+          <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
+          <div class="card-heading text-center">
+            {{$item->name}}
+          </div>
+          <div class="card-text text-center">
+            {{$item->description}}
+          </div>
+          <div class="card-text text-center">
+            {{__('ui.price')}}: {{$item->price}}
+          </div>
+          <p class="card-footer text-center">{{$item->created_at->format('d/m/Y')}}</p>
+          <p class="text-center">{{__('ui.releasedby')}}: {{$item->user->name ?? ''}}</p>
+          <a href="{{route ('item.show',$item)}}" class="card-button"> {{__('ui.view')}}</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{{-- <div class="col-12 col-md-4 d-flex justify-content-evenly">
     <div class="card card-custom">
         <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(300, 200) : asset('/storage/img/placeholderPresto.jpg')}}" class="rounded mx-2 mt-2 mb-4 img-fluid" alt="...">
         <div>
@@ -24,4 +56,4 @@
             <p class="text-center">{{__('ui.releasedby')}}: {{$item->user->name ?? ''}}</p>
         </div>
     </div>
-</div>
+</div> --}}
