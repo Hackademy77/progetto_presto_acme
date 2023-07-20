@@ -106,4 +106,12 @@ return [
 'Attrezzatura' => 'Equipamiento',
 'Sports' => 'Deportes',
 'Film' => 'Películas',
+
+
+'reviewimages' => 'Revisión de Imágenes',
+'adultcontent' => 'Contenido para Adultos',
+'spoof' => 'Sátira',
+'violence' => 'Violencia',
+'medicine' => 'Medicina',
+'racy' => 'Contenido picante',
 ];

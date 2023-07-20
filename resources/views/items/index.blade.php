@@ -1,10 +1,10 @@
 <x-layout>
     
-<div class="container-fluid mt-5">
-    <div class="row flex-column flex-md-row">
+<div class="container mt-5">
+    <div class="row flex-column flex-md-row ">
     
         <div class="col-12 col-md-12 order-2 order-md-1">
-            <div class="row">
+            <div class="row justify-content-evenly">
                 <h2 class="text-center mt-5">{{__('ui.allAnnouncements')}}</h2>
             @foreach($items as $item)
             <x-card

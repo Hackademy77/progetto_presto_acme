@@ -6,19 +6,19 @@
                     <h3 class="text-center mt-5">{{__('ui.helloProf')}}, <span class="colorRed">{{Auth::user()->name}}</span>.</h3>
                     
                     <div class="row">
-                    <ul class="py-4 ">
-                        <li class="py-4 text-center text-md-start">{{__('ui.userFrom')}} : {{Auth::user()->created_at}}</li>
-                        <li class="py-4 text-center text-md-start">Email : {{Auth::user()->email}}</li>
+                    <ul class="py-4 text-center ">
+                        <li class="py-4">{{__('ui.userFrom')}} : {{Auth::user()->created_at}}</li>
+                        <li class="py-4">Email : {{Auth::user()->email}}</li>
                         @if (Auth::user()->is_revisor)
-                        <li class="py-4 text-center text-md-start">
+                        <li class="py-4">
                             {{__('ui.accountStatus')}} : <span class="colorRed">{{__('ui.revisor')}}</span>
                         </li>
                         @elseif (Auth::user() != 'is_revisor' )
-                        <li class="py-4 text-center text-md-start">
+                        <li class="py-4">
                             {{__('ui.accountStatus')}} : <span class="text-success">{{__('ui.user')}}</span>
                         </li>
                         @endif
-                        <li class="py-4 text-center text-md-start"><p>Logout</p>
+                        <li class="py-4">
                             <form action="{{route('logout')}}" method="post" class="nav-link ">
                                 @csrf
                                 <button class="justify-content-center text-center align-self-center logout-custom" type="submit"><i class="fa-solid fa-sign-out fa-xl"></i></button>

@@ -122,6 +122,12 @@ return [
 'Sports' => 'Sports',
 'Film' => 'Movies',
 
+'reviewimages' => 'Image Review',
+'adultcontent' => 'Adult Content',
+'spoof' => 'Spoof',
+'violence' => 'Violence',
+'medicine' => 'Medical Content',
+'racy' => 'Risky content',
 ];
 
 

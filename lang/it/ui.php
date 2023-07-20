@@ -111,5 +111,13 @@ return [
 'Sports' => 'Sports',
 'Film' => 'Film',
 
+//
+//Revisione immagini
+'reviewimages'=>'Revisione Immagini',
+'adultcontent'=>'Contenuto per adulti',
+'spoof'=>'Satira',
+'violence'=>'Violenza',
+'medicine'=>'Contenuti Medici',
+'racy'=>'Contenuti rischiosi'
 
 ];

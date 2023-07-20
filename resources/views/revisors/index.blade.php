@@ -12,7 +12,7 @@
     <div class="container my-5 pb-5">
         <div class="row justify-content-between mt-3 h-75 border border-4 mx-auto">
             <div class="col-12 col-md-5 px-0">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade m-4 ">
+                <div id="carouselExampleFade" class="carousel slide carousel-scroll m-4 ">
                     <div class="carousel-inner rounded">
                         @if ($item_to_check->images->isEmpty())
                             <div class="carousel-item active">
@@ -34,14 +34,12 @@
                     </div>   
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                         data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <i class="fa-solid fa-xl fa-arrow-left" style="color: red"></i>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    data-bs-slide="next">
+                    <i class="fa-solid fa-xl fa-arrow-right" style="color: red"></i>
+                </button>
                 </div>
             </div>
             <div class="col-md-3  text-center d-flex flex-column">
@@ -63,12 +61,12 @@
                     <br>
                     <br>
                     @if (!empty($image))
-                    <h5 class="tc-accent">Revisione Immagini</h5>
-                    <p>Adulti: <span class="{{$image->adult}}"></span></p>
-                    <p>Satira: <span class="{{$image->spoof}}"></span></p>
-                    <p>Medicina: <span class="{{$image->medical}}"></span></p>
-                    <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                    <p>Contenuti Razziali: <span class="{{$image->racy}}"></span></p>
+                    <h5 class="tc-accent">{{__('ui.reviewimages')}}</h5>
+                    <p>{{__('ui.adultcontent')}}: <span class="{{$image->adult}}"></span></p>
+                    <p>{{__('ui.spoof')}}: <span class="{{$image->spoof}}"></span></p>
+                    <p>{{__('ui.medicine')}}: <span class="{{$image->medical}}"></span></p>
+                    <p>{{__('ui.violence')}}: <span class="{{$image->violence}}"></span></p>
+                    <p>{{__('ui.racy')}}: <span class="{{$image->racy}}"></span></p>
                     @endif
                 </div>
             </div>
