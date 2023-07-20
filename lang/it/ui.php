@@ -89,6 +89,7 @@ return [
 'announcementShow'=>'Annuncio',
 'categoryShow'=>'Categoria',
 'priceShow'=>'Prezzo',
+'from' => 'da',
 
 //Create Form
 'nameCreate'=>'Nome',

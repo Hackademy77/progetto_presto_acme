@@ -88,6 +88,7 @@ return [
 'announcementShow'=>'Anuncio',
 'categoryShow'=>'Categoria',
 'priceShow'=>'Precio',
+'from' => 'de',
 //CreateForm
 'nameCreate' => 'Nombre',
 'categoryCreate' => 'Categoría',

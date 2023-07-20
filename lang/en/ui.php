@@ -99,6 +99,7 @@ return [
     'announcementShow'=>'Announcement',
     'categoryShow'=>'Category',
     'priceShow'=>'Price',
+    'from' => 'by',
     //Create Form
     'nameCreate' => 'Name',
 'categoryCreate' => 'Category',

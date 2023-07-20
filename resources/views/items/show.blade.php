@@ -7,22 +7,22 @@
                 </div>
             </div>
     </div>
-    <div class="container-fluid mt-3">
+    <div class="container mt-3 px-3 pt-0 border shadow">
             <div class="row mt-3 justify-content-evenly">
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-7 align-items-center pb-3">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                        <div class="carousel-inner">
+                        <div class="carousel-inner rounded">
                             
                             @if ($item->images->isEmpty())
                             
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/300/200" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/300/201" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/502" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/300/202" class="d-block w-100" alt="...">
                             </div>
                             @else
                             
@@ -47,12 +47,12 @@
                 </button>
             </div>
         </div> <!-- /container -->
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5 border-start shadow my-5">
             <h3 class="card-title mb-3">{{$item->name}}</h3>
             <p class="card-text my-4">{{__('ui.descriptionRev')}}: {{$item->description}}</p>
             <p class="card-text my-5">{{__('ui.priceShow')}} : {{$item->price}} €</p>
             <a href="{{route('categoryShow',['category'=>$item->category])}}" class="my-2 border-top pt-2 border-light card-link shadow btn btn-primary">{{__('ui.categoryShow')}} : {{$item->category->name}}</a>
-            <p class="card-footer">{{__('ui.publishedonRev')}} {{$item->created_at->format('d/m/Y')}} -  {{$item->user->name ??''}}</p>
+            <p class="card-footer">{{__('ui.publishedonRev')}} {{$item->created_at->format('d/m/Y')}} - {{__('ui.from')}} <span class="fw-bold">{{$item->user->name ??''}}</span> </p>
             </div>
         </div>
     </div>

@@ -16,13 +16,13 @@
                     <div class="carousel-inner rounded">
                         @if ($item_to_check->images->isEmpty())
                             <div class="carousel-item active">
-                                <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/300/201" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/501" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/300/202" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="https://picsum.photos/502" class="d-block w-100" alt="...">
+                                <img src="https://picsum.photos/300/203" class="d-block w-100" alt="...">
                             </div>
                         @else
                             @foreach($item_to_check->images as $image)
