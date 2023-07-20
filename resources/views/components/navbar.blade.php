@@ -61,14 +61,14 @@
         </ul>
       </li>
       @if(Auth::user() != null)
-          <ul class="col-md-1  col-12 d-flex justify-content-center align-items-center">    
+          <ul class="col-md-1 col-12 d-flex justify-content-center align-items-center">    
             <li class="nav-item mx-3 col-5 text-center">
-              <a href="{{ route('user.profile') }}"><i class="fa-solid fs-4 fa-user fa-xl " style="color: #ef0027;"></i></a>
+              <a class="" href="{{ route('user.profile') }}"><i class="fa-solid fs-4 fa-user fa-xl py-3" style="color: white;"></i></a>
             </li>  
             <li class="nav-item col-5 text-center">
               <form action="{{route('logout')}}" method="post" class="">
                 @csrf
-                <button class="logout-custom" type="submit"><i class="fa-solid fa-sign-out fa-xl"></i></button>
+                <button class="logout-custom py-1" type="submit"><i class="fa-solid fa-sign-out fa-xl" style="color: white;"></i></button>
               </form>
             </li>
           </ul>

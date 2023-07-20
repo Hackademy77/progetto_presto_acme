@@ -11,6 +11,7 @@
             :item="$item"
             />
             @endforeach
+            </div>
         </div>
     {{-- <div class="col-12 col-md-4 order-1 order-md-2 d-none d-md-inline-flex flex-column align-items-">
         <x-categorygrid />

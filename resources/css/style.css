@@ -7,6 +7,11 @@ body {
     overflow-x: hidden;
 }
 
+.min-page{
+  min-height: 80vh;
+}
+
+
 ul {
     list-style-type: none;
 }

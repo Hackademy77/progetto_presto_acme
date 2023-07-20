@@ -15,7 +15,7 @@
 </head>
 <body>
     <x-navbar />
-    <div class="min-vh-100">
+    <div class="min-page">
         {{$slot}}
         
     </div>
