@@ -45,7 +45,7 @@
                 </button>
             </div>
         </div> <!-- /container -->
-            <div class="col-12 col-md-5 border-start shadow my-5">
+            <div class="col-12 col-md-5 border-start shadow my-5 card">
             <h3 class="card-title mb-3">{{$item->name}}</h3>
             <p class="card-text my-4">{{__('ui.descriptionRev')}}: {{$item->description}}</p>
             <p class="card-text my-5">{{__('ui.priceShow')}} : {{$item->price}} €</p>

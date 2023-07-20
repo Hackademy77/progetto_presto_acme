@@ -13,9 +13,14 @@
         :item="$item"
         />
             @empty
-            <div class="col-12">
+            <div class="col-12 d-flex justify-content-center flex-column text-center">
                 <p class=" fs-2">{{__('ui.noItemsCategory')}}</p>
-                <p class=" fs-1">{{__('ui.publishinCategory')}} : <span class="text-danger">{{$category->name}}</span>  <a href="{{route('item.create')}}" class="btn custom-button-color">{{__('ui.newAnnCat')}}</a></p>
+
+                <p class=" fs-1">{{__('ui.publishinCategory')}} : <span class="text-danger">{{$category->name}}</span></p>
+                <div class="d-flex justify-content-center">
+                    <a href="{{route('item.create')}}" class=" btn-uzerz btn-one-user rounded fs-5 w-25">{{__('ui.newAnnCat')}}</a>
+                </div>
+                
             </div>
             @endforelse
         </div>

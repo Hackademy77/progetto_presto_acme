@@ -21,7 +21,7 @@ let confirm = false;
 let observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) =>{
         if(entry.isIntersecting && confirm == false){
-            creaContatore(price1, 2000, 2022, 100);
+            creaContatore(price1, 2000, 2023, 100);
             creaContatore(price2, 4000, 5000, 0.1);
             creaContatore(price3, 100, 200, 50);
             confirm = true;

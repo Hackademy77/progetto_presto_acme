@@ -29,7 +29,7 @@ return [
     'technology' => 'Tecnología',
 
     //last
-    'latestarticles' => 'Últimos artículos',
+    'latestarticles' => 'Últimos anuncios',
     'category' => 'Categoría',
     'view' => 'Ver',
     'releasedby' => 'Publicado por',
@@ -90,7 +90,7 @@ return [
 'priceShow'=>'Precio',
 'from' => 'de',
 //CreateForm
-'nameCreate' => 'Nombre',
+'nameCreate' => 'Titulo',
 'categoryCreate' => 'Categoría',
 'priceCreate' => 'Precio',
 'descriptionCreate' => 'Descripción',

@@ -32,7 +32,7 @@ return [
     'selectCategoryPlaceholder' => 'Scegli una categoria..',
     
     //last
-    'latestarticles' => 'Ultimi articoli',
+    'latestarticles' => 'Annunci più recenti',
     'category' => 'Categoria',
     'view' => 'Visualizza',
     'releasedby' => 'Pubblicato da',
@@ -92,7 +92,7 @@ return [
 'from' => 'da',
 
 //Create Form
-'nameCreate'=>'Nome',
+'nameCreate'=>'Titolo',
 'categoryCreate'=>'Categoria',
 'priceCreate'=>'Prezzo',
 'descriptionCreate'=>'Descrizione',

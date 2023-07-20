@@ -1,6 +1,6 @@
 
 
-<form wire:submit.prevent="store()" class="mt-5">
+<form wire:submit.prevent="store()" class="mt-5 border p-5 shadow rounded text-center">
   @if(session('message'))
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
       {{session('message')}}
@@ -12,14 +12,14 @@
     <input type="text" class="form-control border border-dark" wire:model.lazy="name">
     @error('name') <span class="error text-success">{{$message}}</span> @enderror
   </div>
-  <div class="mb-3">
+  <div class="mb-3 d-flex justify-content-center flex-column">
     <label for="category_id" class="form-label fs-5"><b>{{__('ui.categoryCreate')}}</b></label>
-    <select wire:model.defer="category_id">
-        <option value="" selected>{{ __('ui.selectCategoryPlaceholder') }}</option>
-        @foreach($categories as $category)
-            <option value="{{$category->id}}">{{$category->name}}</option>
-        @endforeach
-    </select>
+    <div><select wire:model.defer="category_id" class="w-75">
+      <option value="" selected>{{ __('ui.selectCategoryPlaceholder') }}</option>
+      @foreach($categories as $category)
+          <option value="{{$category->id}}">{{$category->name}}</option>
+      @endforeach
+  </select></div>
     @error('category_id') <span class="error text-success">{{$message}}</span> @enderror
 </div>
   <div class="mb-3">
@@ -54,5 +54,5 @@
       </div>
     </div>
     @endif
-  <button type="submit" class="btn btn-primary">{{__('ui.submitCreate')}}</button>
+  <button type="submit" class="btn-uzerz btn-one-user rounded w-50">{{__('ui.submitCreate')}}</button>
 </form>

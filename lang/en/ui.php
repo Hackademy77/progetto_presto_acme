@@ -33,7 +33,7 @@ return [
     'selectCategoryPlaceholder' => 'Select a category..',
 
     //last
-    'latestarticles' => 'Latest articles',
+    'latestarticles' => 'Latest uploads',
     'category' => 'Category',
     'view' => 'View',
     'releasedby' => 'Released by',
@@ -102,7 +102,7 @@ return [
     'priceShow'=>'Price',
     'from' => 'by',
     //Create Form
-    'nameCreate' => 'Name',
+    'nameCreate' => 'Title',
 'categoryCreate' => 'Category',
 'priceCreate' => 'Price',
 'descriptionCreate' => 'Description',

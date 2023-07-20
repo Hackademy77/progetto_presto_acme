@@ -1,18 +1,19 @@
 
       <div class="col-md-3" style="margin-top:50px; margin-bottom:50px;">
-        <div class="card-sl">
+        <div class="card-sl card">
           <div class="card-image d-flex justify-content-center">
             <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(300, 200) : asset('/storage/img/placeholderPresto.jpg')}}" class="img-fluid" alt="...">
         </div>
   
-          <div class="card-heading text-center">
+          <div class="card-heading text-center fs-4">
             {{$item->name}}
           </div>
-          <div class="card-text text-center">
-            {{$item->description}}
+          <div class="card-text text-center fs-5">
+            <p>{{ Str::limit($item->description, 20, '...') }}</p>
+            
           </div>
-          <div class="card-text text-center">
-            {{__('ui.price')}}: {{$item->price}}
+          <div class="card-text text-center fs-4">
+          {{$item->price}} €
           </div>
           <p class="card-footer text-center">{{$item->created_at->format('d/m/Y')}}</p>
           <p class="text-center">{{__('ui.releasedby')}}: {{$item->user->name ?? ''}}</p>
