@@ -1,7 +1,8 @@
 import './bootstrap';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import './script'
-import './carousel'
+import './counter';
+import './script';
+// import './carousel';
 
 
 
