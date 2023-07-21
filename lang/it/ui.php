@@ -6,7 +6,7 @@ return [
     'price' => 'Prezzo',
     'myAdvertisements' => 'I miei annunci',
     'advertisements' => 'Annunci',
-    'reviewerArea' => "Zona Revisore",
+    'reviewerArea' => "Revisore",
     'signUp' => 'Iscriviti',
     'login' => 'Accedi',
     'categories' => 'Categorie',
@@ -27,6 +27,7 @@ return [
     'sport' => 'Sport',
     'movies' => 'Film',
     'technology' => 'Tecnologia',
+    'formImage'=>'Immagini',
 
     'ourCategories'=>'Sfoglia le categorie',
     'selectCategoryPlaceholder' => 'Scegli una categoria..',
@@ -96,7 +97,7 @@ return [
 'categoryCreate'=>'Categoria',
 'priceCreate'=>'Prezzo',
 'descriptionCreate'=>'Descrizione',
-'submitCreate'=>'Invia',
+'submitCreate'=>'Pubblica',
 'deletebtn'=>'Cancella',
 //Search
 'backtoHomebtn'=> 'Torna alla home',

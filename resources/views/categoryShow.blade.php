@@ -2,12 +2,15 @@
     <div class="container-fluid shadow pt-3 mt-5">
         <div class="row">
             <div class="col-12">
-                <h4 class="display-5 text-center">{{__('ui.exploreCategory')}} : {{$category->name}}</h1>
+                <h4 class="text-center  fs-2 p-3">{{__('ui.exploreCategory')}} : {{$category->name}}</h1>
             </div>
         </div>
     </div>
     <div class="container custom-margin-top"> 
         <div class="row justify-content-evenly">
+            <div class="d-flex justify-content-center">
+                {{-- <a href="{{route('item.create')}}" class=" btn-uzerz btn-one-user rounded fs-5 w-25">{{__('ui.newAnnCat')}}</a> --}}
+            </div>
             @forelse($items as $item)
             <x-card
         :item="$item"

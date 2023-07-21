@@ -14,8 +14,8 @@
 <header class="header-intro row">
     <div class="m-intro d-flex align-items-center justify-content-center">
         <div class="e-text d-flex flex-column justify-content-center align-items-center">
-            <span class="subtitle">{{__('ui.welcometo')}}</span>
-            <img class="img-fluid mt-4" width="40%" src="/storage/img/Presto-Logo.png" alt="">
+            <span class="fw-semibold fs-3 fs-md-5">{{__('ui.welcometo')}}</span>
+            <img class="img-fluid mt-4" width="50%" src="/storage/img/Presto-Logo.png" alt="">
             <div class="row d-flex w-100 justify-content-center my-3">
                 <div class="col-12 col-md-5">
                     <div class="box-1 my-2">
@@ -45,21 +45,21 @@
 
 <div class="container" id="mySection">
     <div class="row justify-content-around cst-contatori my-5 py-3">
-        <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom">
+        <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom mx-3 mx-md-0 ">
             <i class="fa-regular fa-calendar fs-1 fa-xl my-4" style="color: #8a0020;"></i>
             <div class="d-flex flex-column fs-2">
                 <h4>Since</h5> 
                 <span id="counter1"></span>
             </div> 
         </div>
-        <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom">
+        <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom mx-3 mx-md-0">
             <i class="fa-regular fa-eye my-4 fs-1" style="color: #8a0020;"></i>
             <div class="d-flex flex-column fs-2">
                 <h4>Visualizzazioni </h5>
                 <span id="counter2"></span>
             </div> 
         </div>
-        <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom">
+        <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom mx-3 mx-md-0">
             <i class="fa-solid fa-cart-shopping my-4 fs-1" style="color: #8a0020;"></i>
             <div class="d-flex flex-column fs-2">    
                 <h4>Clienti </h5> 

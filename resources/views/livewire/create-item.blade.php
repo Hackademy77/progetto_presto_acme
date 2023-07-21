@@ -102,7 +102,7 @@
                     @error('category_id') <span class="error text-success">{{$message}}</span> @enderror
                 </div>
                 <div class="info rounded-2">
-                  <label for="temporary_images" class="form-label fs-5"><b>Immagine:</b></label>
+                  <label for="temporary_images" class="form-label fs-5"><b>{{__('ui.formImage')}}</b></label>
                   <input wire:model="temporary_images" class="inputFields w-100 rounded-2 w-75" type="file" multiple class="form-control border border-dark @error('temporary_images.*') is-invalid @enderror" placeholder="Img"/>
                   @error('temporary_images.*')
                   <p class="text-danger mt_2 rounded-2">{{$message}}</p>
@@ -123,7 +123,7 @@
                 @endif
               </div>
             </div>
-            <input class="col-12 col-md-12" type="submit" id="join-btn" name="join" alt="Join" value="Pubblica">
+            <input class="col-12 col-md-12" type="submit" id="join-btn" name="join" alt="Join" value="{{__('ui.submitCreate')}}">
         </form>
     </div>
   </div>

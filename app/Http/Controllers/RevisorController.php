@@ -6,11 +6,12 @@ use App\Models\Item;
 use App\Models\User;
 use App\Mail\BecomeRevisor;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Session;
 
 class RevisorController extends Controller
 {
@@ -35,6 +36,9 @@ class RevisorController extends Controller
     {
         $item->setAccepted(false);
         Session::put('last_accepted_or_rejected_item', $item);
+        File::deleteDirectory(storage_path('/app/public/items/' . $item->id));
+        
+        $item->delete();
         return redirect()->back()->with('message', "Hai rifiutato l'annuncio '{$item->name}");
     }
 

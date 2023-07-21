@@ -6,7 +6,7 @@ return [
     'price' => 'Precio',
     'myAdvertisements' => 'Mis anuncios',
     'advertisements' => 'Anuncios',
-    'reviewerArea' => 'Área de revisores',
+    'reviewerArea' => 'Revisión',
     'signUp' => 'Registrarse',
     'login' => 'Login',
     'categories' => 'Categorías',
@@ -37,6 +37,7 @@ return [
     //footer
     'workwithus' => '¿Quieres trabajar con nosotros?',
     'clickhere' => 'Haz clic aquí',
+    'formImage'=>'Imágenes',
 
     //login page
     'loginbtn' => 'Iniciar sesión',

@@ -7,7 +7,7 @@ return [
     'price' => 'Price',
     'myAdvertisements' => 'My Announcements',
     'advertisements' => 'Announcements',
-    'reviewerArea' => 'Reviewer\'s area',
+    'reviewerArea' => 'Review',
     'signUp' => 'Sign Up',
     'login' => 'Login',
     'categories' => 'Categories',
@@ -128,6 +128,8 @@ return [
 'violence' => 'Violence',
 'medicine' => 'Medical Content',
 'racy' => 'Risky content',
+
+'formImage'=>'Images'
 ];
 
 

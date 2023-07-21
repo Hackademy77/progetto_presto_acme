@@ -1,6 +1,6 @@
 <x-layout>
 <div class="my-5">
-    <h2 class="text-center">Candidati come Revisore</h2>
+    <h2 class="text-center p-5 box shadow">Candidati come Revisore</h2>
 </div>
 <div class="container">
     <form method="POST" action="{{ route('become.revisor') }}">
@@ -22,7 +22,7 @@
             </p>
         </div>
         <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message"></label>
             <textarea name="message" id="message" rows="4" class="form-control" required></textarea>
         </div>
 
