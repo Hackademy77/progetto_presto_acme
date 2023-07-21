@@ -13,7 +13,7 @@ return [
     'categories' => 'Categories',
     'search' => 'Search...',
     'searchbox' => 'Search...',
-    'sellItemNav' => 'Sell something',
+    'sellItemNav' => 'Publish',
     'lang'=>'Language',
 
     //header

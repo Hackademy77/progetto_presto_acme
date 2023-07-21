@@ -12,7 +12,7 @@ return [
     'categories' => 'Categorie',
     'search' => 'Cerca...',
     'searchbox' => 'Cerca...',
-    'sellItemNav' => 'Pubblica un annuncio',
+    'sellItemNav' => 'Pubblica',
     'lang'=>'Lingua',
     
     //header

@@ -79,7 +79,7 @@
             </div>
             <div class="col-12 col-md-3 mt-3 d-flex flex-column justify-content-center align-items-center p-3">
                 <a href="{{route('categoryShow',['category'=>$item_to_check->category])}}" class="border-top border-light mb-5 card-link shadow btn btn-primary">{{__('ui.categoryShow')}} : {{$item_to_check->category->name}}</a>
-                <p class="card-footer mt-3 fs-5">{{__('ui.publishedonRev')}}: {{ $item_to_check->created_at->format('d/m/Y') }}</p>
+                <p class="card-footer mt-3 fs-5">{{__('ui.publishedonRev')}} {{ $item_to_check->created_at->format('d/m/Y') }}</p>
                 <p class="card-text fs-5">{{__('ui.publishedfromRev')}}: {{ $item_to_check->user->name }}</p>
             </div>
             <div class="col-12 col-md-3 mt-3 d-flex flex-column align-items-center justify-content-around">

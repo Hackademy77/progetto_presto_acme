@@ -9,23 +9,21 @@ use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        // \App\Models\User::factory(10)->create();
+    
+     
+/**Seed the application's database.*/
+  public function run(): void{// \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'prestoAdmin',
-            'email' => 'test@example.com',
+            'name' => 'prestoRevisor',
+            'email' => 'revisore@gmail.com',
             'password' => Hash::make('password'),
             'is_revisor' => true,
         ],);
 
         \App\Models\User::factory()->create([
-            'name' => 'Marco',
-            'email' => 'prova@prova.it',
+            'name' => 'Christian',
+            'email' => 'utente@gmail.com',
             'password' => Hash::make('password'),
             'is_revisor' => false,
         ],);
@@ -39,6 +37,6 @@ class DatabaseSeeder extends Seeder
         }
     }
 
-   
+
 
 }

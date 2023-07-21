@@ -15,13 +15,11 @@
 </head>
 <body>
     <x-navbar />
+
     <div class="min-page">
         {{$slot}}
         
     </div>
-    
-    
-    
     
     <x-footer/>
     @livewireScripts
