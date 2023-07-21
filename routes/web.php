@@ -42,6 +42,7 @@ Route::get('/make/revisor/{user}',[RevisorController::class,'makeRevisor'])->nam
 Route::get('/user/profile',[ProfileController::class,'profile'])->name('user.profile');
 Route::patch('profile/accept/item/{item}', [ProfileController::class, 'acceptItem'])->middleware('isRevisor')->name('profile.accept_item');
 Route::patch('profile/reject/item/{item}', [ProfileController::class, 'rejectItem'])->middleware('isRevisor')->name('profile.reject_item');
+Route::get('/profile/show/item_to_check/{item_to_check}', [ProfileController::class, 'viewItemtoCheck'])->middleware('isRevisor')->name('item_to_check.show');
 
 //rotta language
 Route::post('/lingua/{lang}',[FrontController::class,'setLanguage'])->name('setLocale');

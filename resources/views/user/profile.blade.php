@@ -24,7 +24,68 @@
                                 <button class="justify-content-center text-center align-self-center logout-custom" type="submit"><i class="fa-solid fa-sign-out fa-xl"></i></button>
                             </form></li>
                     </ul>
-                    
+                    {{-- @if (Auth::user()->is_revisor)
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="accepted-tab" data-bs-toggle="tab" data-bs-target="#accepted" type="button" role="tab" aria-controls="accepted" aria-selected="true">{{ __('Accepted Items') }}</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="rejected-tab" data-bs-toggle="tab" data-bs-target="#rejected" type="button" role="tab" aria-controls="rejected" aria-selected="false">{{ __('Rejected Items') }}</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="accepted" role="tabpanel" aria-labelledby="accepted-tab">
+                            @if ($accepted_items->isNotEmpty())
+                                <h2>{{ __('Accepted Items') }}</h2>
+                                <table class="table">
+                                    <!-- Table header -->
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">{{ __('ui.articleNameRev') }}</th>
+                                            <!-- Add other table columns here -->
+                                        </tr>
+                                    </thead>
+                                    <!-- Table body -->
+                                    <tbody>
+                                        @foreach ($accepted_items as $item)
+                                            <tr>
+                                                <td>{{ $item->name }}</td>
+                                                <!-- Add other table columns here -->
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            @else
+                                <p>{{ __('ui.noAcceptedItems') }}</p>
+                            @endif
+                        </div>
+                        <div class="tab-pane fade" id="rejected" role="tabpanel" aria-labelledby="rejected-tab">
+                            @if ($rejected_items->isNotEmpty())
+                                <h2>{{ __('Rejected Items') }}</h2>
+                                <table class="table">
+                                    <!-- Table header -->
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">{{ __('ui.articleNameRev') }}</th>
+                                            <!-- Add other table columns here -->
+                                        </tr>
+                                    </thead>
+                                    <!-- Table body -->
+                                    <tbody>
+                                        @foreach ($rejected_items as $item)
+                                            <tr>
+                                                <td>{{ $item->name }}</td>
+                                                <!-- Add other table columns here -->
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            @else
+                                <p>{{ __('ui.noRejectedItems') }}</p>
+                            @endif
+                        </div>
+                    </div>
+                @endif --}}
                 </div>
                 
             </div>
@@ -100,12 +161,12 @@
                                             <h2 class="text-success mb-5">{{__('ui.workZone')}}</h2>
                                             <h2 class="mb-4">{{__('ui.anntoReview')}}</h2>
                                             
-                                                <div class="row justify-content-center">
+                                                {{-- <div class="row justify-content-center">
                                                     <div class="col-8 col-md-8">
                                                         <a href="{{ route('revisor.index', ['item' => $item]) }}"><button class="btn-uzerz btn-one-user rounded">{{__('ui.tobeReviewedDetails')}}</button></a>
                                                     </div>
                                                     
-                                                </div>
+                                                </div> --}}
                                                 
                                             
                                         </div>
