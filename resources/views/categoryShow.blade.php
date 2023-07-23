@@ -20,8 +20,9 @@
                 <p class=" fs-2">{{__('ui.noItemsCategory')}}</p>
 
                 <p class=" fs-1">{{__('ui.publishinCategory')}} : <span class="text-danger">{{$category->name}}</span></p>
-                <div class="d-flex justify-content-center">
-                    <a href="{{route('item.create')}}" class=" btn-uzerz btn-one-user rounded fs-5 w-25">{{__('ui.newAnnCat')}}</a>
+                <div class="justify-content-center">
+                    <button class=" btn-uzerz btn-one rounded px-3"><a href="{{route('item.create')}}" class="link-header">{{__('ui.newAnnCat')}}</a>
+                    </button>
                 </div>
                 
             </div>

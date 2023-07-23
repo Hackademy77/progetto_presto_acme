@@ -63,7 +63,7 @@
             <i class="fa-solid fa-cart-shopping my-4 fs-1" style="color: #8a0020;"></i>
             <div class="d-flex flex-column fs-2">    
                 <h4>Clienti </h5> 
-                <span id="counter3">+</span>
+                <span id="counter3"></span>
             </div>
         </div>
     </div>

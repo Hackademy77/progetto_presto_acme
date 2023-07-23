@@ -110,11 +110,11 @@
                 </div>
                 @if(!empty($images))
                 <div class="col-12 w-75 rounded-2">
-                  <p>Photo preview:</p>
+                  <p>Preview:</p>
                   <div class="row login-card rounded-2 py-4">
                     @foreach($images as $key => $image)
-                    <div class="col-12 my-3 d-flex flex-column justify-content-center align-items-center shadow-create ">
-                      <div class="img-preview mx-auto shadow-create rounded-2 mt-3" style="background-image: url({{$image->temporaryUrl()}})"></div>
+                    <div class="col-12 my-3 d-flex flex-column justify-content-center align-items-center">
+                      <div class="img-preview mx-auto shadow-create rounded-2 mt-3 img-fluid" style="background-image: url({{$image->temporaryUrl()}})"></div>
                       <button class="btn btn-danger shadow d-block text-center my-3 mx-auto" type="button" wire:click="removeImage({{$key}})">{{__('ui.deletebtn')}}</button>
                     </div>
                     @endforeach

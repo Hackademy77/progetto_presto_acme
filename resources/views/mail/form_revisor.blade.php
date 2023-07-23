@@ -13,7 +13,7 @@
         </div>
 
         <div>
-            <p>
+            <p class="my-3">
                 Inserisci un messaggio per chiedere di diventare revisore.
                 
             </p>
@@ -23,10 +23,10 @@
         </div>
         <div class="form-group">
             <label for="message"></label>
-            <textarea name="message" id="message" rows="4" class="form-control" required></textarea>
+            <textarea name="message" id="message" rows="4" class="form-control shadow" required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Invia</button>
+        <button type="submit" class="btn-cardz btn-one my-5">Invia</button>
     </form>
 </div>
 
