@@ -9,7 +9,7 @@
 </div>
 
             <div class="container mt-5">
-                <div class="row">
+                <div class="row justify-content-evenly">
                     @foreach($items as $item)
                     <x-card
                     :item="$item"

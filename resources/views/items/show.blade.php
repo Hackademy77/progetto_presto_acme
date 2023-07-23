@@ -46,10 +46,12 @@
             </div>
         </div> <!-- /container -->
             <div class="col-12 col-md-5 border-start shadow my-5 card">
-            <h3 class="card-title mb-3">{{$item->name}}</h3>
+            <h3 class="card-title mb-3 ms-2 my-2">{{$item->name}}</h3>
             <p class="card-text my-4">{{__('ui.descriptionRev')}}: {{$item->description}}</p>
             <p class="card-text my-5">{{__('ui.priceShow')}} : {{$item->price}} €</p>
-            <a href="{{route('categoryShow',['category'=>$item->category])}}" class="my-2 border-top pt-2 border-light card-link shadow btn btn-primary">{{__('ui.categoryShow')}} : {{$item->category->name}}</a>
+            <div class="d-flex justify-content-center">
+            <a href="{{route('categoryShow',['category'=>$item->category])}}" class="my-2 mb-4 card-link shadow btn-uzerz btn-one rounded px-3">{{__('ui.categoryShow')}} : {{$item->category->name}}</a>
+            </div>
             <p class="card-footer">{{__('ui.publishedonRev')}} {{$item->created_at->format('d/m/Y')}} - {{__('ui.from')}} <span class="fw-bold">{{$item->user->name ??''}}</span> </p>
             </div>
         </div>

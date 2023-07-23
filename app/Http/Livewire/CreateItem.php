@@ -32,8 +32,8 @@ class CreateItem extends Component
         'description'=>'required',
         'category_id'=>'required',
         'price'=>'required',
-        'images.*' => 'image|max:1024',
-        'temporary_images.*' => 'image|max:1024'
+        'images.*' => 'image|max:2048',
+        'temporary_images.*' => 'image|max:2048'
     ];
 
 
@@ -42,16 +42,16 @@ class CreateItem extends Component
         'min' => 'Il campo  :attribute è troppo corto',
         'temporary_images.required' => 'L\' immagine è richiesta',
         'temporary_images.*.image' => 'I file devono essere immagini',
-        'temporary_images.*.max' => 'L\' immagine dev\' essere massimo di 1mb',
+        'temporary_images.*.max' => 'L\' immagine dev\' essere massimo di 2mb',
         'images.image' => 'L\' immagine dev\'essere un\' immagine',
-        'images.max' => 'L\' immagine dev\' essere massimo di 1mb'
+        'images.max' => 'L\' immagine dev\' essere massimo di 2mb'
 
     ];
 
 
     public function updatedTemporaryImages(){
         if($this->validate([
-            'temporary_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'image|max:2048',
         ])) {
             foreach($this->temporary_images as $image){
                 $this->images[] = $image;

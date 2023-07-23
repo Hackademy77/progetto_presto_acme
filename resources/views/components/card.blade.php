@@ -1,15 +1,15 @@
 
-      <div class="col-md-3" style="margin-top:50px; margin-bottom:50px;">
+      <div class="col-md-3 mx-3" style="margin-top:50px; margin-bottom:50px;">
         <div class="card-sl card">
           <div class="card-image d-flex justify-content-center">
             <img src="{{!$item->images()->get()->isEmpty() ? $item->images()->first()->getUrl(300, 200) : asset('/storage/img/placeholderPresto.jpg')}}" class="img-fluid" alt="...">
         </div>
   
           <div class="card-heading text-center fs-4">
-            {{$item->name}}
+            {{ Str::limit($item->name, 18, '...') }}
           </div>
           <div class="card-text text-center fs-5">
-            <p>{{ Str::limit($item->description, 20, '...') }}</p>
+            <p>{{ Str::limit($item->description, 23, '...') }}</p>
             
                 <a href="{{route ('categoryShow',$item->category)}}" class="link-category-custom">{{$item->category->name}}</a>
           </div>

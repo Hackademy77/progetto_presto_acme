@@ -12,7 +12,7 @@ class FrontController extends Controller
 
     public function welcome() {
 
-        $items = Item::where('is_accepted', true)->take(6)->get()->sortByDesc('created_at');
+        $items = Item::where('is_accepted', true)->take(6)->orderBy('created_at','desc')->get();
         return view('welcome', compact('items'));
     }
 
