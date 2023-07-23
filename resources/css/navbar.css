@@ -180,3 +180,10 @@
 .navbar-toggler {
   border: 2px solid black;
 }
+
+.fa-user {
+  transition: 500ms;
+}
+.fa-user:hover{
+  transform: scale(1.2);
+}
