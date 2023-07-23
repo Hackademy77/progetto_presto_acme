@@ -119,6 +119,14 @@ return [
 'spoof'=>'Satira',
 'violence'=>'Violenza',
 'medicine'=>'Contenuti Medici',
-'racy'=>'Contenuti rischiosi'
+'racy'=>'Contenuti rischiosi',
+
+
+
+//counter
+'customers'=>'Clienti',
+'visits'=>'Visualizzazioni',
+'fromcounter'=>'Dal',
+
 
 ];

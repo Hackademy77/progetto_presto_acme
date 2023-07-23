@@ -45,6 +45,11 @@ return [
     //login page
     'loginbtn' => 'Login',
     'register' => 'Register',
+
+    //counter
+'customers'=>'Customers',
+'visits'=>'Views',
+'fromcounter'=>'Since',
     
     //categoryviews
     'exploreCategory' => 'Explore category ',

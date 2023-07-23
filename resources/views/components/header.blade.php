@@ -48,21 +48,21 @@
         <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom mx-3 mx-md-0 ">
             <i class="fa-regular fa-calendar fs-1 fa-xl my-4" style="color: #8a0020;"></i>
             <div class="d-flex flex-column fs-2">
-                <h4>Since</h5> 
+                <h4>{{__('ui.fromcounter')}}</h5> 
                 <span id="counter1"></span>
             </div> 
         </div>
         <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom mx-3 mx-md-0">
             <i class="fa-regular fa-eye my-4 fs-1" style="color: #8a0020;"></i>
             <div class="d-flex flex-column fs-2">
-                <h4>Visualizzazioni </h5>
+                <h4>{{__('ui.visits')}}</h5>
                 <span id="counter2"></span>
             </div> 
         </div>
         <div class="col-md-3 d-flex justify-content-around text-center flex-column align-items-center divisor-counter-1 py-3 pe-3 shadow-custom mx-3 mx-md-0">
             <i class="fa-solid fa-cart-shopping my-4 fs-1" style="color: #8a0020;"></i>
             <div class="d-flex flex-column fs-2">    
-                <h4>Clienti </h5> 
+                <h4>{{__('ui.customers')}}</h5> 
                 <span id="counter3"></span>
             </div>
         </div>

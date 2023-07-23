@@ -15,6 +15,11 @@ return [
     'sellItemNav' => 'Vender algo',
     'lang'=>'Idioma',
 
+    //counter
+'customers'=>'Clientes',
+'visits'=>'Visitas',
+'fromcounter'=>'Desde',
+
     //header
     'welcometo' => 'Bienvenido a',
     'explore' => 'Explorar',
