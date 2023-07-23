@@ -11,6 +11,7 @@
           <div class="card-text text-center fs-5">
             <p>{{ Str::limit($item->description, 20, '...') }}</p>
             
+                <a href="{{route ('categoryShow',$item->category)}}" class=" link-category-custom">{{$item->category->name}}</a>
           </div>
           <div class="card-text text-center fs-4">
           {{$item->price}} €

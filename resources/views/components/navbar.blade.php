@@ -31,7 +31,7 @@
             @if(Auth::user()->is_revisor)
             <li class="nav-item col-12 col-md-3 text-center ">
                 <a class="nav-link" aria-current="page" href="{{route('revisor.index')}}">{{__('ui.reviewerArea')}}
-                {{-- <span class="" >{{App\Models\Item::toBeRevisionedCount()}} <span class="visually-hidden">unread messages</span></span> --}}
+                <span class="" >({{App\Models\Item::toBeRevisionedCount()}}) <span class="visually-hidden">unread messages</span></span>
                 </a>
             </li>        
             @endif 

@@ -11,10 +11,6 @@
     color: rgb(249, 244, 244);
 }
 
-.link-category-custom {
-    text-decoration: underline;
-    color: black;
-}
 
 .btn-cardz {
     line-height: 50px;
@@ -57,6 +53,10 @@
     border-radius: 8px 8px 0px 0;
   }
   
+.link-category-custom {
+  text-decoration: underline;
+  color: black;
+}
   .card-action {
     position: relative;
     float: right;
